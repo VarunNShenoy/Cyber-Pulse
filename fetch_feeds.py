@@ -21,6 +21,50 @@ def check_feed(feed, source_name):
 
     return True
 
+def categorize_article(title):
+    title = title.lower()
+
+    if "ransomware" in title:
+        return "Ransomware"
+
+    elif ("vulnerability" in title
+          or "vulnerabilities" in title
+          or "zero-day" in title
+          or "cve" in title
+          or "0-day" in title):
+        return "Vulnerabilities"
+
+    elif ("malware" in title
+          or "trojan" in title
+          or "spyware" in title
+          or "infostealer" in title):
+        return "Malware"
+
+    elif ("data breach" in title
+          or "data leak" in title
+          or "customer records" in title
+          or "exposed data" in title
+          or "breach" in title
+          or "exposes" in title
+          or "stolen data" in title
+          or "steal data" in title):
+        return "Data Breaches"
+
+    elif ("apt" in title
+          or "hacking group" in title
+          or "threat actor" in title
+          or "nation-state" in title
+          or "cyber espionage" in title):
+        return "Threat Actors"
+
+    elif ("security update" in title
+          or "security patch" in title
+          or "patch released" in title
+          or "patches" in title
+          or "security advisory" in title):
+        return "Security Updates"
+
+    return "Other"
 
 # Process articles from an RSS feed
 def process_feed(feed_url, source_name):
@@ -62,7 +106,8 @@ def process_feed(feed_url, source_name):
                     "source": source_name,
                     "published": published_date.isoformat(),
                     "url": article.link,
-                    "summary": article.summary
+                    "summary": article.summary,
+                    "category": categorize_article(article.title)
                 }
 
                 feed_articles.append(article_data)
