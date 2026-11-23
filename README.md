@@ -14,7 +14,7 @@ The project uses a Python backend to collect and process RSS feeds, while a Java
 
 News collection and website deployment are automated using GitHub Actions.
 
-![Dashboard](images/SS_Dashboard.png)
+![Dashboard](Images/SS_Dashboard.png)
 
 ## Features
 
