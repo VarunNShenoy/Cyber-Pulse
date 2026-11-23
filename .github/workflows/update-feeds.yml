@@ -1,0 +1,46 @@
+
+name: Update Cyber Pulse News
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Fetch latest cybersecurity news
+        run: |
+          python fetch_feeds.py
+
+      - name: Commit and push updated news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add feeds.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated cybersecurity news update"
+            git push
+          else
+            echo "No news changes to commit"
+          fi
