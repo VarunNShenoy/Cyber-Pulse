@@ -2,6 +2,7 @@
 import feedparser
 import json
 from datetime import datetime, timedelta, timezone
+import re
 
 # Calculate the 7-day cutoff
 now = datetime.now(timezone.utc)
@@ -21,47 +22,60 @@ def check_feed(feed, source_name):
 
     return True
 
-def categorize_article(title):
-    title = title.lower()
 
-    if "ransomware" in title:
-        return "Ransomware"
+# Categorize articles
 
-    elif ("vulnerability" in title
-          or "vulnerabilities" in title
-          or "zero-day" in title
-          or "cve" in title
-          or "0-day" in title):
+def categorize_article(title, summary):
+
+    text = (title + " " + summary).lower()
+
+    if ("vulnerability" in text
+          or "vulnerabilities" in text
+          or "zero-day" in text
+          or "cve" in text
+          or "0-day" in text
+          or "flaw" in text
+          or "rce" in text
+          or "bypass" in text
+          or "unpatched" in text):
         return "Vulnerabilities"
 
-    elif ("malware" in title
-          or "trojan" in title
-          or "spyware" in title
-          or "infostealer" in title):
+    elif "ransomware" in text:
+        return "Ransomware"
+
+    elif ("malware" in text
+          or "trojan" in text
+          or re.search(r"\brat\b", text)
+          or "spyware" in text
+          or "infostealer" in text
+          or "backdoor" in text):
         return "Malware"
 
-    elif ("data breach" in title
-          or "data leak" in title
-          or "customer records" in title
-          or "exposed data" in title
-          or "breach" in title
-          or "exposes" in title
-          or "stolen data" in title
-          or "steal data" in title):
+    elif ("data breach" in text
+          or "data leak" in text
+          or "customer records" in text
+          or "exposed data" in text
+          or "breach" in text
+          or "exposes" in text
+          or "stolen data" in text
+          or "steal data" in text):
         return "Data Breaches"
 
-    elif ("apt" in title
-          or "hacking group" in title
-          or "threat actor" in title
-          or "nation-state" in title
-          or "cyber espionage" in title):
+    elif (re.search(r"\bapt\d*\b", text)
+          or "hacking group" in text
+          or "threat actor" in text
+          or "nation-state" in text
+          or "cyber espionage" in text):
         return "Threat Actors"
 
-    elif ("security update" in title
-          or "security patch" in title
-          or "patch released" in title
-          or "patches" in title
-          or "security advisory" in title):
+    elif ("security update" in text
+          or "security patch" in text
+          or "patch released" in text
+          or "patches" in text
+          or "security advisory" in text
+          or "app permissions" in text
+          or "update released" in text
+          or "fixes" in text):
         return "Security Updates"
 
     return "Other"
@@ -107,7 +121,10 @@ def process_feed(feed_url, source_name):
                     "published": published_date.isoformat(),
                     "url": article.link,
                     "summary": article.summary,
-                    "category": categorize_article(article.title)
+                    "category": categorize_article(
+                        article.title,
+                        article.summary
+                    )
                 }
 
                 feed_articles.append(article_data)
@@ -164,3 +181,4 @@ else:
 print("Before Deduplication:", total_before_dedup)
 print("After Deduplication:", len(articles))
 print("Duplicates Removed:", total_before_dedup - len(articles))
+
