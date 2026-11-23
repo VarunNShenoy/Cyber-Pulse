@@ -60,16 +60,30 @@ const categories = [
 
 async function loadArticles() {
     try {
-        const response = await fetch("../feeds.json");
+
+        // Detect whether the dashboard is running on GitHub Pages
+        const isGitHubPages =
+            window.location.hostname === "varunnshenoy.github.io";
+
+        // Select the correct feeds.json location
+        const feedsPath = isGitHubPages
+            ? "/Cyber-Pulse/feeds.json"
+            : "../feeds.json";
+
+        const response = await fetch(feedsPath);
 
         if (!response.ok) {
-            throw new Error("Unable to load feeds.json");
+            throw new Error(
+                `Unable to load feeds.json. Status: ${response.status}`
+            );
         }
 
         const articles = await response.json();
 
         if (!Array.isArray(articles)) {
-            throw new Error("Article data is not in the expected format");
+            throw new Error(
+                "Article data is not in the expected format"
+            );
         }
 
         allArticles = articles;
@@ -80,13 +94,15 @@ async function loadArticles() {
         applyFilters();
 
     } catch (error) {
+
         console.error("Error loading articles:", error);
 
-        const container = document.getElementById("articleContainer");
+        const container =
+            document.getElementById("articleContainer");
 
         if (container) {
             container.textContent =
-                "Unable to load articles. Please check the backend data and server.";
+                "Unable to load articles. Please check the news data and try again.";
         }
     }
 }
@@ -97,20 +113,21 @@ async function loadArticles() {
 // =========================================
 
 function updateStatistics() {
-    const statsGrid = document.querySelector(".stats-grid");
+
+    const statsGrid =
+        document.querySelector(".stats-grid");
 
     if (!statsGrid) {
         console.error("Statistics container not found");
         return;
     }
 
-    // Remove the existing four cards
+    // Remove existing statistic cards
     statsGrid.innerHTML = "";
 
     // Create all eight statistic cards
     categories.forEach(category => {
 
-        // Count articles belonging to this category
         let count;
 
         if (category.name === "All") {
@@ -133,7 +150,7 @@ function updateStatistics() {
         const number = document.createElement("h2");
         number.textContent = count;
 
-        // Add elements to the card
+        // Assemble the card
         card.appendChild(label);
         card.appendChild(number);
 
@@ -148,7 +165,9 @@ function updateStatistics() {
 // =========================================
 
 function displayArticles(articles) {
-    const container = document.getElementById("articleContainer");
+
+    const container =
+        document.getElementById("articleContainer");
 
     if (!container) {
         console.error("Article container not found");
@@ -159,8 +178,10 @@ function displayArticles(articles) {
 
     // Display message when no articles match
     if (articles.length === 0) {
+
         const message = document.createElement("p");
         message.textContent = "No articles found.";
+
         container.appendChild(message);
         return;
     }
@@ -178,7 +199,8 @@ function displayArticles(articles) {
 
         // Article title
         const title = document.createElement("h3");
-        title.textContent = article.title || "Untitled article";
+        title.textContent =
+            article.title || "Untitled article";
 
         // Article summary
         const summary = document.createElement("p");
@@ -191,11 +213,13 @@ function displayArticles(articles) {
         meta.className = "article-meta";
 
         const source = document.createElement("span");
-        source.textContent = article.source || "Unknown source";
+        source.textContent =
+            article.source || "Unknown source";
 
         const published = document.createElement("span");
 
         if (article.published) {
+
             const date = new Date(article.published);
 
             published.textContent = isNaN(date.getTime())
@@ -208,29 +232,33 @@ function displayArticles(articles) {
 
         // Read more link
         const link = document.createElement("a");
-
         link.textContent = "Read Full Article";
 
         // Only allow HTTP and HTTPS URLs
         try {
+
             const articleURL = new URL(article.url);
 
             if (
                 articleURL.protocol === "https:" ||
                 articleURL.protocol === "http:"
             ) {
+
                 link.href = articleURL.href;
                 link.target = "_blank";
                 link.rel = "noopener noreferrer";
+
             } else {
+
                 link.textContent = "Invalid article link";
             }
 
         } catch {
+
             link.textContent = "Article link unavailable";
         }
 
-        // Assemble the article card
+        // Assemble article card
         card.appendChild(category);
         card.appendChild(title);
         card.appendChild(summary);
@@ -247,6 +275,7 @@ function displayArticles(articles) {
 // =========================================
 
 function searchArticles(articles, searchTerm) {
+
     const searchText = searchTerm.toLowerCase().trim();
 
     if (!searchText) {
@@ -255,10 +284,17 @@ function searchArticles(articles, searchTerm) {
 
     return articles.filter(article => {
 
-        const title = (article.title || "").toLowerCase();
-        const summary = (article.summary || "").toLowerCase();
-        const source = (article.source || "").toLowerCase();
-        const category = (article.category || "").toLowerCase();
+        const title =
+            (article.title || "").toLowerCase();
+
+        const summary =
+            (article.summary || "").toLowerCase();
+
+        const source =
+            (article.source || "").toLowerCase();
+
+        const category =
+            (article.category || "").toLowerCase();
 
         return (
             title.includes(searchText) ||
@@ -292,14 +328,16 @@ function filterByCategory(articles) {
 
 function applyFilters() {
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+        document.getElementById("searchInput");
 
     const searchTerm = searchInput
         ? searchInput.value
         : "";
 
     // First filter by category
-    const categoryFiltered = filterByCategory(allArticles);
+    const categoryFiltered =
+        filterByCategory(allArticles);
 
     // Then filter by search term
     const searchFiltered = searchArticles(
@@ -307,13 +345,15 @@ function applyFilters() {
         searchTerm
     );
 
-    // Display the final results
+    // Display final results
     displayArticles(searchFiltered);
 
     // Update article count
-    const articleCount = document.getElementById("articleCount");
+    const articleCount =
+        document.getElementById("articleCount");
 
     if (articleCount) {
+
         articleCount.textContent =
             `Showing ${searchFiltered.length} of ${allArticles.length} articles`;
     }
@@ -326,7 +366,8 @@ function applyFilters() {
 
 function setupCategoryFilters() {
 
-    const categoryButtons = document.querySelectorAll(".category-btn");
+    const categoryButtons =
+        document.querySelectorAll(".category-btn");
 
     categoryButtons.forEach(button => {
 
@@ -355,7 +396,8 @@ function setupCategoryFilters() {
 
 function setupSearch() {
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+        document.getElementById("searchInput");
 
     if (!searchInput) {
         return;
@@ -382,4 +424,7 @@ function initializeDashboard() {
 
 
 // Start the dashboard
-document.addEventListener("DOMContentLoaded", initializeDashboard);
+document.addEventListener(
+    "DOMContentLoaded",
+    initializeDashboard
+);
