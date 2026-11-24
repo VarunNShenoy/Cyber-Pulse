@@ -1,3 +1,4 @@
+
 name: Deploy Cyber Pulse Dashboard
 
 on:
@@ -8,6 +9,14 @@ on:
       - "frontend/**"
       - "feeds.json"
       - ".github/workflows/deploy-pages.yml"
+
+  workflow_run:
+    workflows:
+      - "Update Cyber Pulse News"
+    types:
+      - completed
+    branches:
+      - master
 
   workflow_dispatch:
 
@@ -22,6 +31,8 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
