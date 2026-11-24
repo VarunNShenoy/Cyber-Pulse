@@ -3,7 +3,7 @@ name: Update Cyber Pulse News
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+  - cron: '30 2,8,14,20 * * *'
 
   workflow_dispatch:
 
