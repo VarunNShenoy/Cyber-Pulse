@@ -1,6 +1,6 @@
 
 /* =========================================
-   CYBER PULSE - MAIN STYLESHEET
+   CYBER PULSE - CYBER INTELLIGENCE THEME
 ========================================= */
 
 /* GLOBAL RESET */
@@ -11,16 +11,30 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-main: #050d19;
+    --bg-card: #0b1728;
+    --bg-card-light: #10243a;
+    --border-color: #163c55;
+    --cyan: #00d9ff;
+    --cyan-light: #67e8f9;
+    --text-primary: #eaf6ff;
+    --text-secondary: #94abc1;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background:
+        radial-gradient(ellipse at 50% 0%, #102c46 0%, transparent 45%),
+        linear-gradient(135deg, #050d19, #071426 60%, #050d19);
+    color: var(--text-primary);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .dashboard {
-    width: 90%;
-    max-width: 1400px;
+    width: 92%;
+    max-width: 1500px;
     margin: auto;
     padding: 30px 0;
 }
@@ -34,40 +48,55 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #334155;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 35px;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 150px;
+    height: 2px;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
 }
 
 .brand h1 {
-    font-size: 32px;
+    font-size: 34px;
     color: #ffffff;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
 
 .brand h1 span {
-    color: #38bdf8;
+    color: var(--cyan);
+    text-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
 }
 
 .brand p {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
 .header-status {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 14px;
 }
 
 .status-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #22c55e;
+    width: 9px;
+    height: 9px;
+    background-color: #22e6a3;
     border-radius: 50%;
-    box-shadow: 0 0 10px #22c55e;
+    box-shadow: 0 0 12px #22e6a3;
 }
 
 
@@ -79,24 +108,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    padding: 10px 0;
 }
 
 .welcome-section h2 {
     color: #ffffff;
-    font-size: 26px;
-    margin-bottom: 5px;
+    font-size: 30px;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .welcome-section p {
-    color: #94a3b8;
+    color: var(--text-secondary);
+    font-size: 15px;
 }
 
 .date-info {
-    background-color: #1e293b;
+    background: rgba(0, 217, 255, 0.07);
+    border: 1px solid rgba(0, 217, 255, 0.3);
     padding: 10px 18px;
-    border-radius: 8px;
-    color: #38bdf8;
+    border-radius: 10px;
+    color: var(--cyan-light);
     font-size: 14px;
 }
 
@@ -109,101 +142,121 @@ body {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .stat-card {
-    min-height: 125px;
+    min-height: 130px;
     padding: 22px;
     border: 1px solid;
-    border-radius: 12px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.stat-card::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -35px;
+    bottom: -45px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    filter: blur(10px);
+    pointer-events: none;
 }
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 217, 255, 0.13);
 }
 
 .stat-card p {
-    color: #e2e8f0;
+    color: #eaf6ff;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
 }
 
 .stat-card h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 
-/* Total Articles - Blue */
+/* Total Articles */
 
 .stat-total {
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-    border-color: #60a5fa;
+    background: linear-gradient(135deg, #102c50, #0b4266);
+    border-color: #168bd0;
 }
 
-.stat-total p,
 .stat-total h2 {
-    color: #ffffff;
+    color: #7dd3fc;
 }
 
 
-/* New Articles - Teal */
+/* New Articles */
 
 .stat-new {
-    background: linear-gradient(135deg, #0f766e, #14b8a6);
-    border-color: #2dd4bf;
+    background: linear-gradient(135deg, #063c40, #075e63);
+    border-color: #14b8a6;
+    box-shadow: 0 0 14px rgba(20, 184, 166, 0.12);
 }
 
-.stat-new p,
 .stat-new h2 {
-    color: #ffffff;
+    color: #5eead4;
 }
 
 
-/* Vulnerabilities - Red */
+/* Vulnerabilities */
 
 .stat-vulnerabilities {
-    background: linear-gradient(135deg, #450a0a, #991b1b);
+    background: linear-gradient(135deg, #35121d, #5b1728);
     border-color: #ef4444;
 }
 
 .stat-vulnerabilities h2 {
-    color: #f87171;
+    color: #fca5a5;
 }
 
 
-/* Ransomware - Purple */
+/* Ransomware */
 
 .stat-ransomware {
-    background: linear-gradient(135deg, #3b0764, #6b21a8);
+    background: linear-gradient(135deg, #251344, #43206c);
     border-color: #a855f7;
 }
 
 .stat-ransomware h2 {
-    color: #c084fc;
+    color: #d8b4fe;
 }
 
 
-/* Data Breaches - Orange */
+/* Data Breaches */
 
 .stat-breaches {
-    background: linear-gradient(135deg, #431407, #9a3412);
+    background: linear-gradient(135deg, #3b210e, #63300e);
     border-color: #f97316;
 }
 
 .stat-breaches h2 {
-    color: #fb923c;
+    color: #fdba74;
 }
 
 
-/* Malware - Pink */
+/* Malware */
 
 .stat-malware {
-    background: linear-gradient(135deg, #500724, #9d174d);
+    background: linear-gradient(135deg, #3d102c, #64183f);
     border-color: #ec4899;
 }
 
@@ -212,35 +265,35 @@ body {
 }
 
 
-/* Threat Actors - Cyan */
+/* Threat Actors */
 
 .stat-threat-actors {
-    background: linear-gradient(135deg, #083344, #155e75);
-    border-color: #06b6d4;
+    background: linear-gradient(135deg, #102044, #18376a);
+    border-color: #6366f1;
 }
 
 .stat-threat-actors h2 {
-    color: #67e8f9;
+    color: #a5b4fc;
 }
 
 
-/* Security Updates - Green */
+/* Security Updates */
 
 .stat-updates {
-    background: linear-gradient(135deg, #052e16, #166534);
-    border-color: #22c55e;
+    background: linear-gradient(135deg, #073a32, #075b46);
+    border-color: #10b981;
 }
 
 .stat-updates h2 {
-    color: #86efac;
+    color: #6ee7b7;
 }
 
 
-/* Other - Grey */
+/* Other */
 
 .stat-other {
-    background: linear-gradient(135deg, #1e293b, #475569);
-    border-color: #94a3b8;
+    background: linear-gradient(135deg, #1b2939, #34465c);
+    border-color: #64748b;
 }
 
 .stat-other h2 {
@@ -253,27 +306,28 @@ body {
 ========================================= */
 
 .search-section {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
 #searchInput {
     width: 100%;
-    padding: 15px 18px;
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 8px;
+    padding: 15px 20px;
+    background: rgba(10, 27, 45, 0.9);
+    border: 1px solid #20516c;
+    border-radius: 12px;
     color: #ffffff;
     font-size: 15px;
     outline: none;
-    transition: border 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 #searchInput:focus {
-    border-color: #38bdf8;
+    border-color: var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.12);
 }
 
 #searchInput::placeholder {
-    color: #64748b;
+    color: #7892a9;
 }
 
 
@@ -304,82 +358,43 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 18px;
-    border: 1px solid;
+    padding: 9px 17px;
+    background: rgba(12, 35, 55, 0.85);
+    border: 1px solid #20516c;
     border-radius: 25px;
-    color: #ffffff;
-    font-size: 14px;
+    color: #c9deee;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-}
-
-.category-btn[data-category="All"] {
-    background: #0754c9;
-    border-color: #008cff;
 }
 
 .category-btn[data-category="All"]::before {
     content: "▣";
 }
 
-.category-btn[data-category="Vulnerabilities"] {
-    background: #751b29;
-    border-color: #ff303c;
-}
-
 .category-btn[data-category="Vulnerabilities"]::before {
     content: "⚠";
-}
-
-.category-btn[data-category="Ransomware"] {
-    background: #48176f;
-    border-color: #a832ff;
 }
 
 .category-btn[data-category="Ransomware"]::before {
     content: "🔒";
 }
 
-.category-btn[data-category="Data Breaches"] {
-    background: #71300b;
-    border-color: #ff8c00;
-}
-
 .category-btn[data-category="Data Breaches"]::before {
     content: "▤";
-}
-
-.category-btn[data-category="Malware"] {
-    background: #79132f;
-    border-color: #ff2855;
 }
 
 .category-btn[data-category="Malware"]::before {
     content: "☣";
 }
 
-.category-btn[data-category="Threat Actors"] {
-    background: #064b65;
-    border-color: #00cfff;
-}
-
 .category-btn[data-category="Threat Actors"]::before {
     content: "☠";
 }
 
-.category-btn[data-category="Security Updates"] {
-    background: #075b36;
-    border-color: #00e676;
-}
-
 .category-btn[data-category="Security Updates"]::before {
     content: "✔";
-}
-
-.category-btn[data-category="Other"] {
-    background: #354453;
-    border-color: #8293a3;
 }
 
 .category-btn[data-category="Other"]::before {
@@ -387,13 +402,18 @@ body {
 }
 
 .category-btn:hover {
-    filter: brightness(1.25);
+    border-color: var(--cyan);
+    color: var(--cyan-light);
+    background: rgba(0, 217, 255, 0.08);
     transform: translateY(-2px);
 }
 
 .category-btn.active {
-    outline: 2px solid #ffffff;
-    outline-offset: 3px;
+    background: rgba(0, 217, 255, 0.15);
+    border-color: var(--cyan);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 217, 255, 0.2);
+    outline: none;
 }
 
 
@@ -414,12 +434,13 @@ body {
 
 .section-heading h3 {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 21px;
+    letter-spacing: 0.2px;
 }
 
 #articleCount {
-    color: #94a3b8;
-    font-size: 14px;
+    color: var(--cyan-light);
+    font-size: 13px;
 }
 
 
@@ -430,7 +451,7 @@ body {
 .article-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 
@@ -439,41 +460,45 @@ body {
 ========================================= */
 
 .article-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #0d1c30, #091525);
+    border: 1px solid #183b54;
+    border-radius: 14px;
     padding: 22px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: all 0.2s ease;
+    min-width: 0;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
-    border-color: #38bdf8;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-color: #00bfe8;
+    box-shadow: 0 8px 25px rgba(0, 191, 232, 0.12);
 }
 
 .article-category {
     display: inline-block;
     width: fit-content;
-    padding: 5px 10px;
+    padding: 5px 11px;
     border-radius: 20px;
-    background-color: #334155;
-    color: #38bdf8;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    color: var(--cyan-light);
     font-size: 12px;
     font-weight: 600;
 }
 
 .article-card h3 {
-    color: #ffffff;
+    color: #f1f7ff;
     font-size: 17px;
     line-height: 1.5;
 }
 
 .article-summary {
-    color: #94a3b8;
+    color: #9bb0c5;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -482,24 +507,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: auto;
-    padding-top: 12px;
-    border-top: 1px solid #334155;
-    color: #64748b;
+    padding-top: 14px;
+    border-top: 1px solid #1b354d;
+    color: #7892a9;
     font-size: 12px;
 }
 
 .article-card a {
     display: inline-block;
-    color: #38bdf8;
+    color: var(--cyan);
     text-decoration: none;
     font-weight: 600;
     margin-top: 5px;
+    transition: color 0.2s ease;
 }
 
 .article-card a:hover {
-    color: #7dd3fc;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -509,10 +536,10 @@ body {
 ========================================= */
 
 .footer {
-    border-top: 1px solid #334155;
+    border-top: 1px solid #183b54;
     padding-top: 25px;
     text-align: center;
-    color: #64748b;
+    color: #7892a9;
     font-size: 13px;
 }
 
@@ -522,13 +549,25 @@ body {
 
 
 /* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+.stat-card:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
    RESPONSIVE DESIGN
 ========================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
     .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .article-grid {
@@ -541,6 +580,7 @@ body {
 
     .dashboard {
         width: 92%;
+        padding: 22px 0;
     }
 
     .header {
@@ -549,10 +589,18 @@ body {
         gap: 15px;
     }
 
+    .brand h1 {
+        font-size: 28px;
+    }
+
     .welcome-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
     }
 
     .stats-grid {
@@ -566,7 +614,7 @@ body {
     }
 
     .stat-card h2 {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     .stat-card p {
@@ -584,11 +632,23 @@ body {
     }
 
     .category-filters {
-        gap: 10px;
+        gap: 9px;
     }
 
     .category-btn {
-        padding: 9px 13px;
+        padding: 8px 12px;
         font-size: 12px;
+    }
+
+    .article-card {
+        padding: 18px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }

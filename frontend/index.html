@@ -5,6 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cyber Pulse provides the latest cybersecurity news, vulnerabilities, ransomware incidents, malware updates and threat intelligence.">
+
     <title>Cyber Pulse | Cybersecurity Intelligence</title>
 
     <link rel="stylesheet" href="style.css">
@@ -17,6 +20,7 @@
 
         <!-- Header -->
         <header class="header">
+
             <div class="brand">
                 <h1>Cyber<span>Pulse</span></h1>
                 <p>Cybersecurity Intelligence Dashboard</p>
@@ -26,12 +30,16 @@
                 <span class="status-indicator"></span>
                 <span>RSS Feed Monitor</span>
             </div>
+
         </header>
 
-        <!-- Main Content -->
-        <main>
 
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Welcome Section -->
             <section class="welcome-section">
+
                 <div>
                     <h2>Security News Overview</h2>
                     <p>Stay informed. Stay ahead of cyber threats.</p>
@@ -40,10 +48,15 @@
                 <div class="date-info">
                     <span>Latest 7 Days</span>
                 </div>
+
             </section>
 
+
             <!-- Statistics -->
-            <section class="stats-grid">
+            <section
+                class="stats-grid"
+                aria-label="Cybersecurity news statistics"
+            >
 
                 <div class="stat-card">
                     <p>Total Articles</p>
@@ -67,14 +80,20 @@
 
             </section>
 
+
             <!-- Search -->
             <section class="search-section">
+
                 <input
-                    type="text"
+                    type="search"
                     id="searchInput"
                     placeholder="Search cybersecurity news..."
+                    aria-label="Search cybersecurity articles"
+                    autocomplete="off"
                 >
+
             </section>
+
 
             <!-- Category Filters -->
             <section class="category-section">
@@ -83,35 +102,35 @@
 
                 <div class="category-filters">
 
-                    <button class="category-btn active" data-category="All">
+                    <button type="button" class="category-btn active" data-category="All">
                         All News
                     </button>
 
-                    <button class="category-btn" data-category="Vulnerabilities">
+                    <button type="button" class="category-btn" data-category="Vulnerabilities">
                         Vulnerabilities
                     </button>
 
-                    <button class="category-btn" data-category="Ransomware">
+                    <button type="button" class="category-btn" data-category="Ransomware">
                         Ransomware
                     </button>
 
-                    <button class="category-btn" data-category="Data Breaches">
+                    <button type="button" class="category-btn" data-category="Data Breaches">
                         Data Breaches
                     </button>
 
-                    <button class="category-btn" data-category="Malware">
+                    <button type="button" class="category-btn" data-category="Malware">
                         Malware
                     </button>
 
-                    <button class="category-btn" data-category="Threat Actors">
+                    <button type="button" class="category-btn" data-category="Threat Actors">
                         Threat Actors
                     </button>
 
-                    <button class="category-btn" data-category="Security Updates">
+                    <button type="button" class="category-btn" data-category="Security Updates">
                         Security Updates
                     </button>
 
-                    <button class="category-btn" data-category="Other">
+                    <button type="button" class="category-btn" data-category="Other">
                         Other
                     </button>
 
@@ -119,17 +138,29 @@
 
             </section>
 
+
             <!-- News Articles -->
-            <section class="news-section">
+            <section class="news-section" aria-label="Cybersecurity news articles">
 
                 <div class="section-heading">
+
                     <h3>Latest Cybersecurity News</h3>
-                    <span id="articleCount">0 articles</span>
+
+                    <span id="articleCount" aria-live="polite">
+                        0 articles
+                    </span>
+
                 </div>
 
-                <div id="articleContainer" class="article-grid">
+                <div
+                    id="articleContainer"
+                    class="article-grid"
+                    aria-live="polite"
+                >
 
-                    <p id="loadingMessage">Loading cybersecurity news...</p>
+                    <p id="loadingMessage" role="status">
+                        Loading cybersecurity news...
+                    </p>
 
                 </div>
 
@@ -137,13 +168,20 @@
 
         </main>
 
+
         <!-- Footer -->
         <footer class="footer">
+
             <p>Cyber Pulse | Cybersecurity News Aggregator</p>
-            <p>News collected from The Hacker News and BleepingComputer.</p>
+
+            <p>
+                News collected from The Hacker News and BleepingComputer.
+            </p>
+
         </footer>
 
     </div>
 
 </body>
+
 </html>
