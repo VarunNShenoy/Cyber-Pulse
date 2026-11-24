@@ -1,175 +1,108 @@
-# Cyber Pulse - Cybersecurity Intelligence Dashboard
+# 🛡️ CyberPulse — Intelligence Sources
 
-Cyber Pulse is a cybersecurity news aggregation dashboard developed with the assistance of AI throughout the development process.
+CyberPulse aggregates cybersecurity news and threat intelligence from **7 trusted industry sources** using RSS feeds.
 
-AI was used as a development companion to help with coding, debugging, understanding concepts, solving implementation challenges, and improving the overall project architecture
+Our goal is to provide a centralized view of the latest cybersecurity developments, including vulnerabilities, ransomware, malware, data breaches, threat actors, and security updates.
 
-**Live Dashboard:** [Cyber Pulse](https://varunnshenoy.github.io/Cyber-Pulse/)
+---
 
-## Overview
+## 🌐 News Sources
 
-Cyber Pulse is a personal cybersecurity intelligence project designed to make it easier to follow security developments from different news sources in one place.
+| # | Source | Coverage | RSS Feed |
+|---|---|---|---|
+| 01 | **The Hacker News** | Cybersecurity news, vulnerabilities, attacks and threat intelligence | [RSS ↗](https://feeds.feedburner.com/TheHackersNews) |
+| 02 | **BleepingComputer** | Malware, ransomware, vulnerabilities and security incidents | [RSS ↗](https://www.bleepingcomputer.com/feed/) |
+| 03 | **Cisco Talos** | Threat research, malware analysis and threat intelligence | [RSS ↗](https://blog.talosintelligence.com/rss/) |
+| 04 | **Palo Alto Networks Unit 42** | Threat actor research, incident response and malware investigations | [RSS ↗](https://unit42.paloaltonetworks.com/feed/) |
+| 05 | **The DFIR Report** | Digital forensics, incident response and attack investigations | [RSS ↗](https://thedfirreport.com/feed/) |
+| 06 | **Zero Day Initiative (ZDI)** | Zero-day vulnerabilities, security advisories and vulnerability research | [RSS ↗](https://www.zerodayinitiative.com/rss/published/) |
+| 07 | **Krebs on Security** | Cybercrime investigations, data breaches and security reporting | [RSS ↗](https://krebsonsecurity.com/feed/) |
 
-The project uses a Python backend to collect and process RSS feeds, while a JavaScript frontend presents the articles through an interactive dashboard.
+---
 
-News collection and website deployment are automated using GitHub Actions.
+## 📊 Source Coverage
 
-![Dashboard](Images/SS_Dashboard.png)
-
-## Features
-
-- **Automated News Collection:** Fetches cybersecurity news from RSS feeds.
-- **Article Categorization:** Organizes articles into categories.
-- **Duplicate Filtering:** Removes duplicate articles based on their URLs.
-- **Time-Based Filtering:** Focuses on articles published within the last seven days.
-- **Interactive Dashboard:** Displays article statistics and news cards.
-- **Search Functionality:** Search articles by title, summary, source, or category.
-- **Category Filters:** Filter articles by cybersecurity topic.
-- **Automated Updates:** GitHub Actions runs the news collection workflow daily.
-- **Online Deployment:** Dashboard hosted using GitHub Pages.
-
-## Technology Stack
-
-| Technology | Purpose |
+| Intelligence Area | Primary Sources |
 |---|---|
-| Python | RSS collection and article processing |
-| JavaScript | Dashboard functionality and filtering |
-| HTML | Dashboard structure |
-| CSS | Dashboard styling |
-| RSS | News collection |
-| Git & GitHub | Version control |
-| GitHub Actions | Workflow automation |
-| GitHub Pages | Website hosting |
+| Vulnerabilities | Zero Day Initiative, The Hacker News, BleepingComputer |
+| Ransomware | BleepingComputer, The DFIR Report |
+| Data Breaches | Krebs on Security, The Hacker News |
+| Malware | Cisco Talos, Unit 42, BleepingComputer |
+| Threat Actors | Unit 42, Cisco Talos, The DFIR Report |
+| Security Updates | Zero Day Initiative, BleepingComputer |
 
-## Architecture
+*Sources can contribute to multiple intelligence categories.*
 
-```text
-RSS News Sources
-       |
-       v
-Python Backend
-(fetch_feeds.py)
-       |
-       v
-Article Processing
-- Date filtering
-- Categorization
-- Deduplication
-       |
-       v
-feeds.json
-       |
-       v
-JavaScript Frontend
-       |
-       v
-Cyber Pulse Dashboard
-       |
-       v
-GitHub Pages
-```
+---
 
-## Current News Sources
+## ⚙️ RSS Collection Pipeline
 
-- [The Hacker News](https://thehackernews.com/)
-- [BleepingComputer](https://www.bleepingcomputer.com/)
-
-## Automation
-
-Cyber Pulse uses two GitHub Actions workflows:
-
-**1. News Collection**
-- Runs automatically every day at 02:30 UTC (08:00 IST).
-- Executes the Python news collection script.
-- Updates `feeds.json`.
-- Commits and pushes changes when new data is available.
-
-**2. Dashboard Deployment**
-- Automatically deploys the website when relevant frontend files or `feeds.json` are updated.
-- Publishes the dashboard through GitHub Pages.
-
-Both workflows can also be triggered manually through GitHub Actions.
-
-## Project Structure
+CyberPulse uses Python and RSS feeds to automate news collection.
 
 ```text
-Cyber-News-Dashboard/
-│
-├── .github/
-│   └── workflows/
-│       ├── update-feeds.yml
-│       └── deploy-pages.yml
-│
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── fetch_feeds.py
-├── feeds.json
-├── requirements.txt
-├── test_rss.py
-├── .gitignore
-└── README.md
+       RSS NEWS SOURCES
+              │
+              ▼
+       fetch_feeds.py
+              │
+              ▼
+      Parse RSS Articles
+              │
+              ▼
+       Filter Last 7 Days
+              │
+              ▼
+       Remove Duplicates
+              │
+              ▼
+       Categorize Articles
+              │
+              ▼
+          feeds.json
+              │
+              ▼
+       CyberPulse Dashboard
 ```
 
-## Run Locally
+### Collection Features
 
-**Prerequisites**
-- Python 3
-- Git
+- Automated RSS feed monitoring
+- Seven-day article filtering
+- Duplicate article removal
+- Keyword-based categorization
+- Centralized JSON data storage
+- Automated GitHub Actions updates
 
-**1. Clone the repository**
+---
 
-```bash
-git clone https://github.com/VarunNShenoy/Cyber-Pulse.git
-cd Cyber-Pulse
-```
+## 📈 Latest Collection Snapshot
 
-**2. Create a virtual environment**
+**Last recorded successful collection: November 24, 2026**
 
-Windows:
+| Metric | Result |
+|---|---:|
+| Configured Sources | 7 |
+| Articles Before Deduplication | 103 |
+| Articles After Deduplication | 103 |
+| Duplicates Removed | 0 |
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
+---
 
-**3. Install dependencies**
+## 🚫 Removed Sources
 
-```bash
-pip install -r requirements.txt
-```
+| Source | Reason |
+|---|---|
+| CISA | RSS endpoint returned HTTP 403 |
+| National Vulnerability Database (NVD) | Previous RSS endpoint returned HTTP 404 |
 
-**4. Fetch the latest news**
+These sources may be reconsidered if reliable feed access becomes available.
 
-```bash
-python fetch_feeds.py
-```
+---
 
-**5. Start the local web server**
+## ⚠️ Disclaimer
 
-```bash
-python -m http.server 8000
-```
+CyberPulse collects publicly available cybersecurity news from third-party publishers. Original articles remain the property of their respective publishers.
 
-Open:
+CyberPulse is an independent learning project and is not affiliated with the listed organizations.
 
-```text
-http://localhost:8000/frontend/
-```
-
-## Future Improvements
-
-- Integrate additional cybersecurity RSS sources.
-- Introduce an AI-powered cybersecurity news assistant.
-- Improve article categorization.
-- Add more advanced search and filtering capabilities.
-
-## Author
-
-Developed as a personal project to explore cybersecurity news aggregation, Python automation, JavaScript, and CI/CD workflows.
-
-**GitHub:** [VarunNShenoy](https://github.com/VarunNShenoy)
-
-**Live Project:** [Cyber Pulse Dashboard](https://varunnshenoy.github.io/Cyber-Pulse/)
+**Stay informed. Stay ahead of cyber threats.** 🛡️
