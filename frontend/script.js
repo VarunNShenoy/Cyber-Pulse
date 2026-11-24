@@ -1,561 +1,573 @@
 
-// =========================================
-// CYBER PULSE - MAIN JAVASCRIPT
-// =========================================
+/* =========================================
+   CYBER PULSE - MAIN JAVASCRIPT
+========================================= */
 
-// Store all articles loaded from feeds.json
 let allArticles = [];
-
-// Store the currently selected category or filter
 let selectedCategory = "All";
 
-// Categories displayed in the dashboard
-const categories = [
-    {
-        name: "All",
-        label: "Total Articles",
-        className: "stat-total"
-    },
-    {
-        name: "New24Hours",
-        label: "New Articles (24h)",
-        className: "stat-new"
-    },
-    {
-        name: "Vulnerabilities",
-        label: "Vulnerabilities",
-        className: "stat-vulnerabilities"
-    },
-    {
-        name: "Ransomware",
-        label: "Ransomware",
-        className: "stat-ransomware"
-    },
-    {
-        name: "Data Breaches",
-        label: "Data Breaches",
-        className: "stat-breaches"
-    },
-    {
-        name: "Malware",
-        label: "Malware",
-        className: "stat-malware"
-    },
-    {
-        name: "Threat Actors",
-        label: "Threat Actors",
-        className: "stat-threat-actors"
-    },
-    {
-        name: "Security Updates",
-        label: "Security Updates",
-        className: "stat-updates"
-    },
-    {
-        name: "Other",
-        label: "Other",
-        className: "stat-other"
-    }
-];
+const categoryCountElements = {
+    All: "totalArticles",
+    New24Hours: "recentCount",
+    Vulnerabilities: "vulnerabilityCount",
+    Ransomware: "ransomwareCount",
+    "Data Breaches": "breachCount",
+    Malware: "malwareCount",
+    "Threat Actors": "threatActorCount",
+    "Security Updates": "securityUpdateCount",
+    Other: "otherCount"
+};
+
+const categoryHeadings = {
+    All: "Latest Cybersecurity News",
+    New24Hours: "Cybersecurity News - Last 24 Hours",
+    Vulnerabilities: "Vulnerability News",
+    Ransomware: "Ransomware News",
+    "Data Breaches": "Data Breach News",
+    Malware: "Malware News",
+    "Threat Actors": "Threat Actor News",
+    "Security Updates": "Security Updates",
+    Other: "Other Cybersecurity News"
+};
 
 
-// =========================================
-// NEW ARTICLES TIME FILTER
-// =========================================
-
-function getLast24HoursArticles(articles) {
-
-    const now = Date.now();
-    const last24Hours = now - (24 * 60 * 60 * 1000);
-
-    return articles.filter(article => {
-
-        if (!article.published) {
-            return false;
-        }
-
-        const publishedTime = new Date(article.published).getTime();
-
-        return (
-            !isNaN(publishedTime) &&
-            publishedTime >= last24Hours &&
-            publishedTime <= now
-        );
-    });
-}
-
-
-// =========================================
-// LOAD ARTICLES
-// =========================================
+/* =========================================
+   LOAD ARTICLES
+========================================= */
 
 async function loadArticles() {
 
     try {
 
-        // Detect whether the dashboard is running on GitHub Pages
         const isGitHubPages =
             window.location.hostname === "varunnshenoy.github.io";
 
-        // Select the correct feeds.json location
-        const feedsPath = isGitHubPages
+        const feedPath = isGitHubPages
             ? "/Cyber-Pulse/feeds.json"
             : "../feeds.json";
 
-        const response = await fetch(feedsPath);
+        const response = await fetch(feedPath);
 
         if (!response.ok) {
-            throw new Error(
-                `Unable to load feeds.json. Status: ${response.status}`
-            );
+            throw new Error(`HTTP error: ${response.status}`);
         }
 
-        const articles = await response.json();
+        allArticles = await response.json();
 
-        if (!Array.isArray(articles)) {
-            throw new Error(
-                "Article data is not in the expected format"
-            );
+        if (!Array.isArray(allArticles)) {
+            throw new Error("Invalid feeds.json format.");
         }
-
-        allArticles = articles;
 
         console.log("Articles loaded:", allArticles.length);
 
-        updateStatistics();
-        applyFilters();
+        initializeDashboard();
 
     } catch (error) {
 
         console.error("Error loading articles:", error);
 
-        const container =
-            document.getElementById("articleContainer");
+        const container = document.getElementById("articleContainer");
 
         if (container) {
-            container.textContent =
-                "Unable to load articles. Please check the news data and try again.";
+            container.replaceChildren();
+
+            const message = document.createElement("p");
+            message.className = "no-articles";
+            message.textContent =
+                "Unable to load cybersecurity news. Please try again later.";
+
+            container.appendChild(message);
         }
+
     }
+
 }
 
 
-// =========================================
-// UPDATE STATISTICS
-// =========================================
+/* =========================================
+   IMAGE HANDLING
+========================================= */
+
+function getValidURL(value) {
+
+    if (!value || typeof value !== "string") {
+        return null;
+    }
+
+    try {
+
+        const url = new URL(value);
+
+        if (url.protocol === "https:" || url.protocol === "http:") {
+            return url.href;
+        }
+
+    } catch (error) {
+        return null;
+    }
+
+    return null;
+}
+
+
+function createImagePlaceholder() {
+
+    const placeholder = document.createElement("div");
+    placeholder.className = "article-image-placeholder";
+
+    const icon = document.createElement("span");
+    icon.className = "placeholder-icon";
+    icon.textContent = "◈";
+
+    const label = document.createElement("span");
+    label.className = "placeholder-label";
+    label.textContent = "CYBER PULSE";
+
+    placeholder.append(icon, label);
+
+    return placeholder;
+
+}
+
+
+function createArticleImage(article) {
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "article-image-wrapper";
+
+    const imageURL = getValidURL(article.image);
+
+    if (!imageURL) {
+        wrapper.appendChild(createImagePlaceholder());
+        return wrapper;
+    }
+
+    const image = document.createElement("img");
+
+    image.className = "article-image";
+    image.src = imageURL;
+
+    image.alt = article.title
+        ? `Image for ${article.title}`
+        : "Cybersecurity article image";
+
+    image.loading = "lazy";
+    image.decoding = "async";
+
+    image.onerror = function () {
+        wrapper.replaceChildren(createImagePlaceholder());
+    };
+
+    wrapper.appendChild(image);
+
+    return wrapper;
+
+}
+
+
+/* =========================================
+   DATE HANDLING
+========================================= */
+
+function getLast24HoursArticles() {
+
+    const now = Date.now();
+    const cutoff = now - (24 * 60 * 60 * 1000);
+
+    return allArticles.filter(article => {
+
+        const published = new Date(article.published).getTime();
+
+        return (
+            Number.isFinite(published) &&
+            published >= cutoff &&
+            published <= now
+        );
+
+    });
+
+}
+
+
+/* =========================================
+   UPDATE ALL STATISTICS CARDS
+========================================= */
 
 function updateStatistics() {
 
-    const statsGrid =
-        document.querySelector(".stats-grid");
+    const counts = {
+        All: allArticles.length,
+        New24Hours: getLast24HoursArticles().length,
+        Vulnerabilities: 0,
+        Ransomware: 0,
+        "Data Breaches": 0,
+        Malware: 0,
+        "Threat Actors": 0,
+        "Security Updates": 0,
+        Other: 0
+    };
 
-    if (!statsGrid) {
-        console.error("Statistics container not found");
-        return;
-    }
+    allArticles.forEach(article => {
 
-    // Remove existing statistic cards
-    statsGrid.innerHTML = "";
+        const category = article.category;
 
-    // Create all statistic cards
-    categories.forEach(category => {
-
-        let count;
-
-        if (category.name === "All") {
-
-            count = allArticles.length;
-
-        } else if (category.name === "New24Hours") {
-
-            count = getLast24HoursArticles(allArticles).length;
-
-        } else {
-
-            count = allArticles.filter(article =>
-                article.category === category.name
-            ).length;
+        if (
+            Object.prototype.hasOwnProperty.call(counts, category) &&
+            category !== "All" &&
+            category !== "New24Hours"
+        ) {
+            counts[category]++;
         }
 
-        // Create the card
-        const card = document.createElement("div");
-
-        card.className = `stat-card ${category.className}`;
-
-        // Make the card interactive
-        card.style.cursor = "pointer";
-        card.setAttribute("role", "button");
-        card.setAttribute("tabindex", "0");
-        card.setAttribute(
-            "aria-label",
-            `Filter articles by ${category.label}`
-        );
-
-        // Store the filter name on the card
-        card.dataset.statCategory = category.name;
-
-        // Create category label
-        const label = document.createElement("p");
-        label.textContent = category.label;
-
-        // Create article count
-        const number = document.createElement("h2");
-        number.textContent = count;
-
-        // Assemble the card
-        card.appendChild(label);
-        card.appendChild(number);
-
-        // Handle mouse click
-        card.addEventListener("click", () => {
-            selectStatisticCard(category.name);
-        });
-
-        // Handle keyboard interaction
-        card.addEventListener("keydown", event => {
-
-            if (event.key === "Enter" || event.key === " ") {
-
-                event.preventDefault();
-                selectStatisticCard(category.name);
-            }
-        });
-
-        // Add card to statistics section
-        statsGrid.appendChild(card);
     });
 
-    updateActiveStatisticCard();
+    Object.entries(categoryCountElements).forEach(([category, elementId]) => {
+
+        const element = document.getElementById(elementId);
+
+        if (element) {
+            element.textContent = counts[category];
+        }
+
+    });
+
 }
 
 
-// =========================================
-// SELECT STATISTIC CARD
-// =========================================
+/* =========================================
+   ARTICLE COUNT
+========================================= */
 
-function selectStatisticCard(categoryName) {
+function updateArticleCount(count) {
 
-    // Update selected filter
-    selectedCategory = categoryName;
+    const element = document.getElementById("articleCount");
 
-    // Synchronize category buttons
-    const categoryButtons =
-        document.querySelectorAll(".category-btn");
+    if (!element) return;
 
-    categoryButtons.forEach(button => {
+    element.textContent =
+        `${count} ${count === 1 ? "article" : "articles"}`;
+
+}
+
+
+/* =========================================
+   UPDATE ACTIVE FILTER
+========================================= */
+
+function updateActiveCategory() {
+
+    document.querySelectorAll(".category-btn").forEach(button => {
 
         button.classList.toggle(
             "active",
             button.dataset.category === selectedCategory
         );
+
     });
 
-    // Apply selected filter
-    applyFilters();
+    document.querySelectorAll(".stat-card").forEach(card => {
+
+        card.classList.toggle(
+            "active",
+            card.dataset.category === selectedCategory
+        );
+
+    });
+
+    const heading = document.getElementById("newsHeading");
+
+    if (heading) {
+        heading.textContent =
+            categoryHeadings[selectedCategory] || "Cybersecurity News";
+    }
+
 }
 
 
-// =========================================
-// UPDATE ACTIVE STATISTIC CARD
-// =========================================
-
-function updateActiveStatisticCard() {
-
-    const statisticCards =
-        document.querySelectorAll(".stat-card");
-
-    statisticCards.forEach(card => {
-
-        const isSelected =
-            card.dataset.statCategory === selectedCategory;
-
-        // Highlight the currently selected card
-        card.style.outline = isSelected
-            ? "2px solid #ffffff"
-            : "none";
-
-        card.style.outlineOffset = isSelected
-            ? "3px"
-            : "0";
-    });
-}
-
-
-// =========================================
-// DISPLAY ARTICLES
-// =========================================
+/* =========================================
+   DISPLAY ARTICLES
+========================================= */
 
 function displayArticles(articles) {
 
-    const container =
-        document.getElementById("articleContainer");
+    const container = document.getElementById("articleContainer");
 
-    if (!container) {
-        console.error("Article container not found");
-        return;
-    }
+    if (!container) return;
 
-    container.innerHTML = "";
+    container.replaceChildren();
 
-    // Display message when no articles match
+    updateArticleCount(articles.length);
+
     if (articles.length === 0) {
 
         const message = document.createElement("p");
-        message.textContent = "No articles found.";
+
+        message.className = "no-articles";
+        message.textContent =
+            "No articles found in this category. Try another filter or search term.";
 
         container.appendChild(message);
+
         return;
     }
 
     articles.forEach(article => {
 
-        // Main article card
         const card = document.createElement("div");
         card.className = "article-card";
 
+        // Article image
+        card.appendChild(createArticleImage(article));
+
         // Category
         const category = document.createElement("span");
+
         category.className = "article-category";
         category.textContent = article.category || "Other";
 
-        // Article title
+        // Title
         const title = document.createElement("h3");
-        title.textContent =
-            article.title || "Untitled article";
 
-        // Article summary
+        title.className = "article-title";
+        title.textContent = article.title || "Untitled Article";
+
+        // Summary
         const summary = document.createElement("p");
+
         summary.className = "article-summary";
         summary.textContent =
             article.summary || "No summary available.";
 
-        // Article metadata
-        const meta = document.createElement("div");
-        meta.className = "article-meta";
+        // Metadata
+        const metadata = document.createElement("div");
+        metadata.className = "article-meta";
 
         const source = document.createElement("span");
-        source.textContent =
-            article.source || "Unknown source";
+        source.textContent = article.source || "Unknown Source";
 
         const published = document.createElement("span");
+        const date = new Date(article.published);
 
-        if (article.published) {
+        published.textContent = Number.isNaN(date.getTime())
+            ? "Date unavailable"
+            : date.toLocaleDateString();
 
-            const date = new Date(article.published);
+        metadata.append(source, published);
 
-            published.textContent = isNaN(date.getTime())
-                ? ""
-                : date.toLocaleDateString();
-        }
+        // Category explanation
+        const explanation = document.createElement("details");
+        explanation.className = "category-explanation";
 
-        meta.appendChild(source);
-        meta.appendChild(published);
+        const explanationHeading = document.createElement("summary");
+        explanationHeading.textContent = "Why this category?";
 
-        // Read more link
+        const explanationText = document.createElement("p");
+
+        explanationText.textContent =
+            article.category_reason ||
+            "No classification explanation available.";
+
+        explanation.append(
+            explanationHeading,
+            explanationText
+        );
+
+        // Article link
         const link = document.createElement("a");
-        link.textContent = "Read Full Article";
 
-        // Only allow HTTP and HTTPS URLs
-        try {
+        link.className = "article-link";
 
-            const articleURL = new URL(article.url);
+        const articleURL = getValidURL(article.url);
 
-            if (
-                articleURL.protocol === "https:" ||
-                articleURL.protocol === "http:"
-            ) {
+        if (articleURL) {
 
-                link.href = articleURL.href;
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
+            link.href = articleURL;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "Read Full Article →";
 
-            } else {
+        } else {
 
-                link.textContent = "Invalid article link";
-            }
-
-        } catch {
-
+            link.href = "#";
             link.textContent = "Article link unavailable";
+
+            link.addEventListener("click", event => {
+                event.preventDefault();
+            });
+
         }
 
         // Assemble article card
-        card.appendChild(category);
-        card.appendChild(title);
-        card.appendChild(summary);
-        card.appendChild(meta);
-        card.appendChild(link);
+        card.append(
+            category,
+            title,
+            summary,
+            metadata,
+            explanation,
+            link
+        );
 
         container.appendChild(card);
+
     });
+
 }
 
 
-// =========================================
-// SEARCH ARTICLES
-// =========================================
+/* =========================================
+   SEARCH
+========================================= */
 
-function searchArticles(articles, searchTerm) {
+function searchArticles() {
 
-    const searchText = searchTerm.toLowerCase().trim();
+    applyFilters();
 
-    if (!searchText) {
-        return articles;
-    }
-
-    return articles.filter(article => {
-
-        const title =
-            (article.title || "").toLowerCase();
-
-        const summary =
-            (article.summary || "").toLowerCase();
-
-        const source =
-            (article.source || "").toLowerCase();
-
-        const category =
-            (article.category || "").toLowerCase();
-
-        return (
-            title.includes(searchText) ||
-            summary.includes(searchText) ||
-            source.includes(searchText) ||
-            category.includes(searchText)
-        );
-    });
 }
 
 
-// =========================================
-// FILTER BY CATEGORY
-// =========================================
+/* =========================================
+   CATEGORY FILTERING
+========================================= */
 
-function filterByCategory(articles) {
+function filterByCategory(category) {
 
-    // Show all articles
-    if (selectedCategory === "All") {
-        return articles;
-    }
+    selectedCategory = category;
 
-    // Show articles published in the last 24 hours
-    if (selectedCategory === "New24Hours") {
-        return getLast24HoursArticles(articles);
-    }
+    updateActiveCategory();
 
-    // Show articles belonging to the selected category
-    return articles.filter(article =>
-        article.category === selectedCategory
-    );
+    applyFilters();
+
 }
 
 
-// =========================================
-// APPLY SEARCH AND CATEGORY FILTERS
-// =========================================
+/* =========================================
+   APPLY CATEGORY AND SEARCH FILTERS
+========================================= */
 
 function applyFilters() {
 
-    const searchInput =
-        document.getElementById("searchInput");
+    const searchInput = document.getElementById("searchInput");
 
     const searchTerm = searchInput
-        ? searchInput.value
+        ? searchInput.value.toLowerCase().trim()
         : "";
 
-    // First filter by selected category or time period
-    const categoryFiltered =
-        filterByCategory(allArticles);
+    let filteredArticles = [...allArticles];
 
-    // Then filter by search term
-    const searchFiltered = searchArticles(
-        categoryFiltered,
-        searchTerm
-    );
+    // Apply selected category
+    if (selectedCategory === "New24Hours") {
 
-    // Display final results
-    displayArticles(searchFiltered);
+        filteredArticles = getLast24HoursArticles();
 
-    // Update article count
-    const articleCount =
-        document.getElementById("articleCount");
+    } else if (selectedCategory !== "All") {
 
-    if (articleCount) {
+        filteredArticles = filteredArticles.filter(article =>
+            article.category === selectedCategory
+        );
 
-        articleCount.textContent =
-            `Showing ${searchFiltered.length} of ${allArticles.length} articles`;
     }
 
-    // Update selected statistic card
-    updateActiveStatisticCard();
+    // Apply search within the selected category
+    if (searchTerm) {
+
+        filteredArticles = filteredArticles.filter(article => {
+
+            const searchableText = [
+                article.title,
+                article.summary,
+                article.source,
+                article.category
+            ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+
+            return searchableText.includes(searchTerm);
+
+        });
+
+    }
+
+    displayArticles(filteredArticles);
+
 }
 
 
-// =========================================
-// CATEGORY BUTTON EVENTS
-// =========================================
+/* =========================================
+   SET UP CATEGORY BUTTONS AND STAT CARDS
+========================================= */
 
 function setupCategoryFilters() {
 
-    const categoryButtons =
-        document.querySelectorAll(".category-btn");
-
-    categoryButtons.forEach(button => {
+    // Category filter buttons
+    document.querySelectorAll(".category-btn").forEach(button => {
 
         button.addEventListener("click", () => {
 
-            selectedCategory = button.dataset.category;
+            const category = button.dataset.category;
 
-            // Remove active class from every button
-            categoryButtons.forEach(btn => {
-                btn.classList.remove("active");
-            });
+            if (category) {
+                filterByCategory(category);
+            }
 
-            // Highlight selected button
-            button.classList.add("active");
-
-            // Apply selected category
-            applyFilters();
         });
+
     });
+
+    // Clickable statistics cards
+    document.querySelectorAll(".stat-card").forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const category = card.dataset.category;
+
+            if (category) {
+                filterByCategory(category);
+            }
+
+        });
+
+    });
+
 }
 
 
-// =========================================
-// SEARCH INPUT EVENT
-// =========================================
+/* =========================================
+   SEARCH EVENT
+========================================= */
 
 function setupSearch() {
 
-    const searchInput =
-        document.getElementById("searchInput");
+    const searchInput = document.getElementById("searchInput");
 
-    if (!searchInput) {
-        return;
+    if (searchInput) {
+        searchInput.addEventListener("input", searchArticles);
     }
 
-    searchInput.addEventListener("input", () => {
-        applyFilters();
-    });
 }
 
 
-// =========================================
-// INITIALIZE DASHBOARD
-// =========================================
+/* =========================================
+   INITIALIZE DASHBOARD
+========================================= */
 
 function initializeDashboard() {
+
+    updateStatistics();
 
     setupCategoryFilters();
 
     setupSearch();
 
-    loadArticles();
+    updateActiveCategory();
+
+    displayArticles(allArticles);
+
 }
 
 
-// Start the dashboard
-document.addEventListener(
-    "DOMContentLoaded",
-    initializeDashboard
-);
+/* =========================================
+   START APPLICATION
+========================================= */
+
+document.addEventListener("DOMContentLoaded", loadArticles);

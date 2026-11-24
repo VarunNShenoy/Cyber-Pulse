@@ -18,9 +18,7 @@
 
     <div class="dashboard">
 
-        <!-- Header -->
         <header class="header">
-
             <div class="brand">
                 <h1>Cyber<span>Pulse</span></h1>
                 <p>Cybersecurity Intelligence Dashboard</p>
@@ -30,16 +28,11 @@
                 <span class="status-indicator"></span>
                 <span>RSS Feed Monitor</span>
             </div>
-
         </header>
 
-
-        <!-- Main Content -->
         <main class="main-content">
 
-            <!-- Welcome Section -->
             <section class="welcome-section">
-
                 <div>
                     <h2>Security News Overview</h2>
                     <p>Stay informed. Stay ahead of cyber threats.</p>
@@ -48,42 +41,69 @@
                 <div class="date-info">
                     <span>Latest 7 Days</span>
                 </div>
-
             </section>
 
+            <!-- Clickable Statistics Cards -->
+            <section class="stats-grid" aria-label="Cybersecurity news filters">
 
-            <!-- Statistics -->
-            <section
-                class="stats-grid"
-                aria-label="Cybersecurity news statistics"
-            >
-
-                <div class="stat-card">
+                <button type="button" class="stat-card total-card active" data-category="All">
                     <p>Total Articles</p>
                     <h2 id="totalArticles">0</h2>
-                </div>
+                    <span>View all news</span>
+                </button>
 
-                <div class="stat-card">
+                <button type="button" class="stat-card recent-card" data-category="New24Hours">
+                    <p>Last 24 Hours</p>
+                    <h2 id="recentCount">0</h2>
+                    <span>Recently published</span>
+                </button>
+
+                <button type="button" class="stat-card vulnerability-card" data-category="Vulnerabilities">
                     <p>Vulnerabilities</p>
                     <h2 id="vulnerabilityCount">0</h2>
-                </div>
+                    <span>Security flaws and CVEs</span>
+                </button>
 
-                <div class="stat-card">
+                <button type="button" class="stat-card ransomware-card" data-category="Ransomware">
                     <p>Ransomware</p>
                     <h2 id="ransomwareCount">0</h2>
-                </div>
+                    <span>Ransomware incidents</span>
+                </button>
 
-                <div class="stat-card">
+                <button type="button" class="stat-card breach-card" data-category="Data Breaches">
                     <p>Data Breaches</p>
                     <h2 id="breachCount">0</h2>
-                </div>
+                    <span>Exposed information</span>
+                </button>
+
+                <button type="button" class="stat-card malware-card" data-category="Malware">
+                    <p>Malware</p>
+                    <h2 id="malwareCount">0</h2>
+                    <span>Malicious software</span>
+                </button>
+
+                <button type="button" class="stat-card threat-card" data-category="Threat Actors">
+                    <p>Threat Actors</p>
+                    <h2 id="threatActorCount">0</h2>
+                    <span>Attacker activity</span>
+                </button>
+
+                <button type="button" class="stat-card updates-card" data-category="Security Updates">
+                    <p>Security Updates</p>
+                    <h2 id="securityUpdateCount">0</h2>
+                    <span>Patches and advisories</span>
+                </button>
+
+                <button type="button" class="stat-card other-card" data-category="Other">
+                    <p>Other News</p>
+                    <h2 id="otherCount">0</h2>
+                    <span>Other cyber developments</span>
+                </button>
 
             </section>
-
 
             <!-- Search -->
             <section class="search-section">
-
                 <input
                     type="search"
                     id="searchInput"
@@ -91,19 +111,20 @@
                     aria-label="Search cybersecurity articles"
                     autocomplete="off"
                 >
-
             </section>
-
 
             <!-- Category Filters -->
             <section class="category-section">
-
                 <h3>Categories</h3>
 
                 <div class="category-filters">
 
                     <button type="button" class="category-btn active" data-category="All">
                         All News
+                    </button>
+
+                    <button type="button" class="category-btn" data-category="New24Hours">
+                        Last 24 Hours
                     </button>
 
                     <button type="button" class="category-btn" data-category="Vulnerabilities">
@@ -135,53 +156,32 @@
                     </button>
 
                 </div>
-
             </section>
-
 
             <!-- News Articles -->
             <section class="news-section" aria-label="Cybersecurity news articles">
 
                 <div class="section-heading">
-
-                    <h3>Latest Cybersecurity News</h3>
-
-                    <span id="articleCount" aria-live="polite">
-                        0 articles
-                    </span>
-
+                    <h3 id="newsHeading">Latest Cybersecurity News</h3>
+                    <span id="articleCount" aria-live="polite">0 articles</span>
                 </div>
 
-                <div
-                    id="articleContainer"
-                    class="article-grid"
-                    aria-live="polite"
-                >
-
+                <div id="articleContainer" class="article-grid" aria-live="polite">
                     <p id="loadingMessage" role="status">
                         Loading cybersecurity news...
                     </p>
-
                 </div>
 
             </section>
 
         </main>
 
-
-        <!-- Footer -->
         <footer class="footer">
-
             <p>Cyber Pulse | Cybersecurity News Aggregator</p>
-
-            <p>
-                News collected from The Hacker News and BleepingComputer.
-            </p>
-
+            <p>News collected from multiple cybersecurity sources.</p>
         </footer>
 
     </div>
 
 </body>
-
 </html>
