@@ -69,10 +69,13 @@ async function loadArticles() {
         const container = document.getElementById("articleContainer");
 
         if (container) {
+
             container.replaceChildren();
 
             const message = document.createElement("p");
+
             message.className = "no-articles";
+
             message.textContent =
                 "Unable to load cybersecurity news. Please try again later.";
 
@@ -85,93 +88,13 @@ async function loadArticles() {
 
 
 /* =========================================
-   IMAGE HANDLING
-========================================= */
-
-function getValidURL(value) {
-
-    if (!value || typeof value !== "string") {
-        return null;
-    }
-
-    try {
-
-        const url = new URL(value);
-
-        if (url.protocol === "https:" || url.protocol === "http:") {
-            return url.href;
-        }
-
-    } catch (error) {
-        return null;
-    }
-
-    return null;
-}
-
-
-function createImagePlaceholder() {
-
-    const placeholder = document.createElement("div");
-    placeholder.className = "article-image-placeholder";
-
-    const icon = document.createElement("span");
-    icon.className = "placeholder-icon";
-    icon.textContent = "◈";
-
-    const label = document.createElement("span");
-    label.className = "placeholder-label";
-    label.textContent = "CYBER PULSE";
-
-    placeholder.append(icon, label);
-
-    return placeholder;
-
-}
-
-
-function createArticleImage(article) {
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "article-image-wrapper";
-
-    const imageURL = getValidURL(article.image);
-
-    if (!imageURL) {
-        wrapper.appendChild(createImagePlaceholder());
-        return wrapper;
-    }
-
-    const image = document.createElement("img");
-
-    image.className = "article-image";
-    image.src = imageURL;
-
-    image.alt = article.title
-        ? `Image for ${article.title}`
-        : "Cybersecurity article image";
-
-    image.loading = "lazy";
-    image.decoding = "async";
-
-    image.onerror = function () {
-        wrapper.replaceChildren(createImagePlaceholder());
-    };
-
-    wrapper.appendChild(image);
-
-    return wrapper;
-
-}
-
-
-/* =========================================
    DATE HANDLING
 ========================================= */
 
 function getLast24HoursArticles() {
 
     const now = Date.now();
+
     const cutoff = now - (24 * 60 * 60 * 1000);
 
     return allArticles.filter(article => {
@@ -216,7 +139,9 @@ function updateStatistics() {
             category !== "All" &&
             category !== "New24Hours"
         ) {
+
             counts[category]++;
+
         }
 
     });
@@ -277,8 +202,10 @@ function updateActiveCategory() {
     const heading = document.getElementById("newsHeading");
 
     if (heading) {
+
         heading.textContent =
             categoryHeadings[selectedCategory] || "Cybersecurity News";
+
     }
 
 }
@@ -303,49 +230,63 @@ function displayArticles(articles) {
         const message = document.createElement("p");
 
         message.className = "no-articles";
+
         message.textContent =
             "No articles found in this category. Try another filter or search term.";
 
         container.appendChild(message);
 
         return;
+
     }
 
     articles.forEach(article => {
 
         const card = document.createElement("div");
+
         card.className = "article-card";
 
-        // Article image
-        card.appendChild(createArticleImage(article));
 
         // Category
+
         const category = document.createElement("span");
 
         category.className = "article-category";
+
         category.textContent = article.category || "Other";
 
+
         // Title
+
         const title = document.createElement("h3");
 
         title.className = "article-title";
+
         title.textContent = article.title || "Untitled Article";
 
+
         // Summary
+
         const summary = document.createElement("p");
 
         summary.className = "article-summary";
+
         summary.textContent =
             article.summary || "No summary available.";
 
+
         // Metadata
+
         const metadata = document.createElement("div");
+
         metadata.className = "article-meta";
 
         const source = document.createElement("span");
+
         source.textContent = article.source || "Unknown Source";
 
         const published = document.createElement("span");
+
         const date = new Date(article.published);
 
         published.textContent = Number.isNaN(date.getTime())
@@ -354,11 +295,15 @@ function displayArticles(articles) {
 
         metadata.append(source, published);
 
+
         // Category explanation
+
         const explanation = document.createElement("details");
+
         explanation.className = "category-explanation";
 
         const explanationHeading = document.createElement("summary");
+
         explanationHeading.textContent = "Why this category?";
 
         const explanationText = document.createElement("p");
@@ -372,23 +317,43 @@ function displayArticles(articles) {
             explanationText
         );
 
+
         // Article link
+
         const link = document.createElement("a");
 
         link.className = "article-link";
 
-        const articleURL = getValidURL(article.url);
+        let articleURL = null;
+
+        try {
+
+            const url = new URL(article.url);
+
+            if (url.protocol === "https:" || url.protocol === "http:") {
+                articleURL = url.href;
+            }
+
+        } catch (error) {
+
+            articleURL = null;
+
+        }
 
         if (articleURL) {
 
             link.href = articleURL;
+
             link.target = "_blank";
+
             link.rel = "noopener noreferrer";
+
             link.textContent = "Read Full Article →";
 
         } else {
 
             link.href = "#";
+
             link.textContent = "Article link unavailable";
 
             link.addEventListener("click", event => {
@@ -397,7 +362,9 @@ function displayArticles(articles) {
 
         }
 
+
         // Assemble article card
+
         card.append(
             category,
             title,
@@ -454,7 +421,9 @@ function applyFilters() {
 
     let filteredArticles = [...allArticles];
 
+
     // Apply selected category
+
     if (selectedCategory === "New24Hours") {
 
         filteredArticles = getLast24HoursArticles();
@@ -467,7 +436,9 @@ function applyFilters() {
 
     }
 
+
     // Apply search within the selected category
+
     if (searchTerm) {
 
         filteredArticles = filteredArticles.filter(article => {
@@ -500,6 +471,7 @@ function applyFilters() {
 function setupCategoryFilters() {
 
     // Category filter buttons
+
     document.querySelectorAll(".category-btn").forEach(button => {
 
         button.addEventListener("click", () => {
@@ -514,7 +486,9 @@ function setupCategoryFilters() {
 
     });
 
+
     // Clickable statistics cards
+
     document.querySelectorAll(".stat-card").forEach(card => {
 
         card.addEventListener("click", () => {
@@ -541,7 +515,9 @@ function setupSearch() {
     const searchInput = document.getElementById("searchInput");
 
     if (searchInput) {
+
         searchInput.addEventListener("input", searchArticles);
+
     }
 
 }

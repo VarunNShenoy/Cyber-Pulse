@@ -8,7 +8,6 @@ import calendar
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from collections import Counter
-from urllib.parse import urljoin, urlparse
 
 
 # =========================================
@@ -33,236 +32,6 @@ def clean_summary(summary):
     summary = re.sub(r"\s+", " ", summary)
 
     return summary.strip()
-
-
-# =========================================
-# EXTRACT ARTICLE IMAGE
-# =========================================
-
-def extract_article_image(article):
-
-    """
-    Extract the original article image from RSS metadata.
-
-    Priority:
-    1. media:content
-    2. media:thumbnail
-    3. Image enclosures
-    4. Images inside article content
-    5. Images inside RSS summary
-
-    Returns an image URL or None.
-    """
-
-    article_link = article.get("link", "")
-
-    # Check whether a URL is a valid HTTP/HTTPS image URL
-    def valid_image_url(image_url):
-
-        if not image_url:
-            return None
-
-        image_url = html.unescape(str(image_url)).strip()
-
-        image_url = image_url.strip("\"'")
-
-        # Resolve relative image URLs
-        image_url = urljoin(article_link, image_url)
-
-        parsed_url = urlparse(image_url)
-
-        if parsed_url.scheme not in ("http", "https"):
-            return None
-
-        if not parsed_url.netloc:
-            return None
-
-        return image_url
-
-    # =====================================
-    # 1. MEDIA:CONTENT
-    # =====================================
-
-    media_content = article.get("media_content", [])
-
-    if isinstance(media_content, dict):
-        media_content = [media_content]
-
-    for media in media_content:
-
-        image_url = media.get("url")
-
-        media_type = media.get("type", "")
-        media_medium = media.get("medium", "")
-
-        if (
-            media_medium == "image"
-            or media_type.startswith("image/")
-            or re.search(
-                r"\.(jpg|jpeg|png|webp|gif)(?:$|\?)",
-                image_url or "",
-                re.IGNORECASE
-            )
-        ):
-
-            image = valid_image_url(image_url)
-
-            if image:
-                return image
-
-    # =====================================
-    # 2. MEDIA:THUMBNAIL
-    # =====================================
-
-    media_thumbnails = article.get("media_thumbnail", [])
-
-    if isinstance(media_thumbnails, dict):
-        media_thumbnails = [media_thumbnails]
-
-    for thumbnail in media_thumbnails:
-
-        image_url = thumbnail.get("url")
-
-        image = valid_image_url(image_url)
-
-        if image:
-            return image
-
-    # =====================================
-    # 3. IMAGE ENCLOSURES
-    # =====================================
-
-    enclosures = article.get("enclosures", [])
-
-    for enclosure in enclosures:
-
-        image_url = enclosure.get("href") or enclosure.get("url")
-
-        media_type = enclosure.get("type", "")
-
-        if (
-            media_type.startswith("image/")
-            or re.search(
-                r"\.(jpg|jpeg|png|webp|gif)(?:$|\?)",
-                image_url or "",
-                re.IGNORECASE
-            )
-        ):
-
-            image = valid_image_url(image_url)
-
-            if image:
-                return image
-
-    # Check links with rel="enclosure"
-    for link in article.get("links", []):
-
-        if link.get("rel") == "enclosure":
-
-            image_url = link.get("href", "")
-            media_type = link.get("type", "")
-
-            if (
-                media_type.startswith("image/")
-                or re.search(
-                    r"\.(jpg|jpeg|png|webp|gif)(?:$|\?)",
-                    image_url,
-                    re.IGNORECASE
-                )
-            ):
-
-                image = valid_image_url(image_url)
-
-                if image:
-                    return image
-
-    # =====================================
-    # 4. EXTRACT IMAGE FROM HTML CONTENT
-    # =====================================
-
-    html_contents = []
-
-    # RSS content:encoded or content field
-    content_blocks = article.get("content", [])
-
-    for block in content_blocks:
-
-        if isinstance(block, dict):
-
-            value = block.get("value", "")
-
-            if value:
-                html_contents.append(value)
-
-    # RSS summary or description
-    summary = article.get("summary", "")
-
-    if summary:
-        html_contents.append(summary)
-
-    # Also check description if available
-    description = article.get("description", "")
-
-    if description:
-        html_contents.append(description)
-
-    for content_html in html_contents:
-
-        # Find image tags
-        image_tags = re.findall(
-            r"<img\b[^>]*>",
-            content_html,
-            re.IGNORECASE
-        )
-
-        for image_tag in image_tags:
-
-            # Extract src, data-src or other lazy-loaded image attributes
-            attributes = re.findall(
-                r"""([\w-]+)\s*=\s*["']([^"']+)["']""",
-                image_tag,
-                re.IGNORECASE
-            )
-
-            image_attributes = dict(attributes)
-
-            possible_urls = [
-
-                image_attributes.get("src"),
-
-                image_attributes.get("data-src"),
-
-                image_attributes.get("data-original"),
-
-                image_attributes.get("data-lazy-src")
-
-            ]
-
-            # Check srcset if available
-            srcset = image_attributes.get("srcset", "")
-
-            if srcset:
-
-                first_srcset = srcset.split(",")[0].strip()
-
-                if first_srcset:
-
-                    possible_urls.append(
-                        first_srcset.split()[0]
-                    )
-
-            for image_url in possible_urls:
-
-                image = valid_image_url(image_url)
-
-                if image:
-                    return image
-
-    # =====================================
-    # NO IMAGE FOUND
-    # =====================================
-
-    return None
 
 
 # =========================================
@@ -743,9 +512,6 @@ def process_feed(feed_url, source_name):
                     summary
                 )
 
-                # Extract original article image
-                image = extract_article_image(article)
-
                 article_data = {
 
                     "title": title,
@@ -760,9 +526,7 @@ def process_feed(feed_url, source_name):
 
                     "category": category,
 
-                    "category_reason": category_reason,
-
-                    "image": image
+                    "category_reason": category_reason
                 }
 
                 feed_articles.append(article_data)
@@ -913,28 +677,5 @@ if articles:
     for category, count in category_counts.most_common():
 
         print(f"{category}: {count}")
-
-    # Image collection statistics
-    image_count = sum(
-        1 for article in articles
-        if article.get("image")
-    )
-
-    no_image_count = len(articles) - image_count
-
-    print("\nIMAGE COLLECTION:")
-
-    print("Articles with images:", image_count)
-
-    print("Articles without images:", no_image_count)
-
-    if articles:
-        image_percentage = (
-            image_count / len(articles)
-        ) * 100
-
-        print(
-            f"Image coverage: {image_percentage:.1f}%"
-        )
 
 print("========================================")

@@ -4,288 +4,324 @@
         "source": "The Hacker News",
         "published": "2026-11-24T12:42:09+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
-        "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it.\n\nIn March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's official checkout tool. They even labeled it a",
-        "category": "Vulnerabilities"
+        "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's official checkout tool. They even labeled it a",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
         "source": "The Hacker News",
         "published": "2026-11-24T12:02:00+00:00",
         "url": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
-        "summary": "A quirk in how the .NET Framework loads a program file let a local attacker run untrusted code past two separate protections on Windows built to block it, Google Project Zero researcher James Forshaw showed in a write-up published yesterday.\n\nThe same loading behavior bypassed Oracle VirtualBox's process hardening on Windows hosts, tracked as CVE-2026-87268, and Windows code integrity, tracked",
-        "category": "Vulnerabilities"
+        "summary": "A quirk in how the .NET Framework loads a program file let a local attacker run untrusted code past two separate protections on Windows built to block it, Google Project Zero researcher James Forshaw showed in a write-up published yesterday. The same loading behavior bypassed Oracle VirtualBox's process hardening on Windows hosts, tracked as CVE-2026-87268, and Windows code integrity, tracked",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "2027 SOC Budget Reset: 5 Priorities to Cut Costs and Reduce Cyber Risk",
         "source": "The Hacker News",
         "published": "2026-11-24T12:01:54+00:00",
         "url": "https://thehackernews.com/2026/11/2027-soc-budget-reset-5-priorities-to.html",
-        "summary": "What if your biggest SOC budget problem isn't how much you spend, but how much analyst time you lose?\n\nAccording to ANY.RUN's estimates, SOC teams could recover 450 analyst hours per 1,000 investigated alerts through faster threat analysis and IOC research. That's a significant opportunity as manual investigations, repeated checks, and unnecessary escalations continue to drain resources.\n\nAs",
-        "category": "Vulnerabilities"
+        "summary": "What if your biggest SOC budget problem isn't how much you spend, but how much analyst time you lose? According to ANY.RUN's estimates, SOC teams could recover 450 analyst hours per 1,000 investigated alerts through faster threat analysis and IOC research. That's a significant opportunity as manual investigations, repeated checks, and unnecessary escalations continue to drain resources. As",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
         "source": "The Hacker News",
         "published": "2026-11-24T10:44:49+00:00",
         "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
-        "summary": "Norway's National Security Authority (NSM) has disclosed that it became aware of a security vulnerability in Microsoft's Azure API Management (APIM) that has affected multiple businesses in the country, including energy companies Equinor and Skagerak Energi.\n\n\"An unknown actor has been actively looking for access tokens, secrets, and named values ​​in APIM,\" NSM said. \"It is still uncertain how",
-        "category": "Vulnerabilities"
+        "summary": "Norway's National Security Authority (NSM) has disclosed that it became aware of a security vulnerability in Microsoft's Azure API Management (APIM) that has affected multiple businesses in the country, including energy companies Equinor and Skagerak Energi. \"An unknown actor has been actively looking for access tokens, secrets, and named values ​​in APIM,\" NSM said. \"It is still uncertain how",
+        "category": "Data Breaches",
+        "category_reason": "Score: 4. Title matched: customer secrets (+4)"
     },
     {
         "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
         "source": "The Hacker News",
         "published": "2026-11-24T08:34:20+00:00",
         "url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
-        "summary": "A flaw in WHMCS's shopping cart, the billing and automation platform many web hosting companies use to run their businesses, could allow anyone on the internet to retrieve customer records and administrator password hashes from an installation's database. No login is needed.\n\nThe company disclosed the SQL injection yesterday along with two other flaws that need a logged-in client, and released",
-        "category": "Vulnerabilities"
+        "summary": "A flaw in WHMCS's shopping cart, the billing and automation platform many web hosting companies use to run their businesses, could allow anyone on the internet to retrieve customer records and administrator password hashes from an installation's database. No login is needed. The company disclosed the SQL injection yesterday along with two other flaws that need a logged-in client, and released",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Title matched: sql injection (+4)"
     },
     {
         "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
         "source": "The Hacker News",
         "published": "2026-11-24T06:02:57+00:00",
         "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
-        "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime.\n\n\"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,\" OpenAI said in a post on X.\n\nThe AI upstart called the initiative a",
-        "category": "Vulnerabilities"
+        "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,\" OpenAI said in a post on X. The AI upstart called the initiative a",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: rce (+1); Title matched: exploit (+4)"
     },
     {
         "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
         "source": "The Hacker News",
         "published": "2026-11-24T06:02:45+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe critical vulnerabilities are listed below -\n\n\n  CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF) vulnerability in N-able MailAssure's LDAP",
-        "category": "Vulnerabilities"
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF) vulnerability in N-able MailAssure's LDAP",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 11. Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Title matched: zero-day (+4); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
         "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
         "source": "The Hacker News",
         "published": "2026-11-23T17:45:15+00:00",
         "url": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
-        "summary": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access to compromised networks.\n\nThe modified variant \"implements various tricks to hide itself from security tools,\"",
-        "category": "Vulnerabilities"
+        "summary": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access to compromised networks. The modified variant \"implements various tricks to hide itself from security tools,\"",
+        "category": "Threat Actors",
+        "category_reason": "Score: 5. Summary matched: threat actor (+1); Title matched: webworm (+4)"
     },
     {
         "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
         "source": "The Hacker News",
         "published": "2026-11-23T15:10:48+00:00",
         "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
-        "summary": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Sometimes they just use one that's already open.\n\nThis week's stories show how quickly a small opening can turn into a much bigger mess. One breach helps attackers reach another target. Tools people rely",
-        "category": "Vulnerabilities"
+        "summary": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Sometimes they just use one that's already open. This week's stories show how quickly a small opening can turn into a much bigger mess. One breach helps attackers reach another target. Tools people rely",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: 0-day (+4); Title matched: nginx2root (+4)"
     },
     {
         "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
         "source": "The Hacker News",
         "published": "2026-11-23T13:22:20+00:00",
         "url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
-        "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code.\n\nThe vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1), is a case of code injection impacting binary-parser versions prior to 2.3.1.\n\n\"Binary-parser before 2.3.1 contains a code injection vulnerability that allows",
-        "category": "Vulnerabilities"
+        "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code. The vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1), is a case of code injection impacting binary-parser versions prior to 2.3.1. \"Binary-parser before 2.3.1 contains a code injection vulnerability that allows",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Summary matched: code injection (+3); Summary matched: vulnerability (+1); Summary matched: security flaw (+1); Summary matched: cve- (+1); Summary matched: execute arbitrary code (+1); Summary matched: arbitrary code (+1)"
     },
     {
         "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
         "source": "The Hacker News",
         "published": "2026-11-23T12:41:04+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
-        "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers.\n\nThe activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that allows a guest to transfer and execute a malicious payload on a connecting technician's host.\n\n\"On November 12, 2026, we observed one managed service",
-        "category": "Vulnerabilities"
+        "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers. The activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that allows a guest to transfer and execute a malicious payload on a connecting technician's host. \"On November 12, 2026, we observed one managed service",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 6. Summary matched: security flaw (+1); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
         "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
         "source": "The Hacker News",
         "published": "2026-11-23T12:28:09+00:00",
         "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
-        "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers.\n\nThe bug, tracked as CVE-2026-134624, is a server-side request forgery (SSRF) flaw. It allowed a user with high-level API access to open connections to internal systems of the user's choosing on the",
-        "category": "Vulnerabilities"
+        "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers. The bug, tracked as CVE-2026-134624, is a server-side request forgery (SSRF) flaw. It allowed a user with high-level API access to open connections to internal systems of the user's choosing on the",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: cve- (+1)"
     },
     {
         "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
         "source": "The Hacker News",
         "published": "2026-11-23T09:11:56+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
-        "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild.\n\nThe vulnerability, tracked as CVE-2026-131914, carries a CVSS score of 9.3 out of 10.0. The issue affects versions 0.9.1.0 and 0.9.1 Beta, and relates to an",
-        "category": "Vulnerabilities"
+        "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild. The vulnerability, tracked as CVE-2026-131914, carries a CVSS score of 9.3 out of 10.0. The issue affects versions 0.9.1.0 and 0.9.1 Beta, and relates to an",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 13. Summary matched: critical vulnerability (+3); Summary matched: vulnerability (+1); Title matched: rce (+4); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
         "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
         "source": "The Hacker News",
         "published": "2026-11-23T09:04:08+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
-        "summary": "Hackers exploited a vulnerability in GL.iNet's GoodCloud remote management service to install malware on some customer routers and KVM devices, the maker of travel routers and remote-access KVM hardware said in a security notice updated today.\n\nThe company identified and fixed the flaw on Friday and blocked the access the attacker used, so devices can no longer be infected through this route.",
-        "category": "Vulnerabilities"
+        "summary": "Hackers exploited a vulnerability in GL.iNet's GoodCloud remote management service to install malware on some customer routers and KVM devices, the maker of travel routers and remote-access KVM hardware said in a security notice updated today. The company identified and fixed the flaw on Friday and blocked the access the attacker used, so devices can no longer be infected through this route.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerability (+1); Title matched: exploit (+4)"
     },
     {
         "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
         "source": "The Hacker News",
         "published": "2026-11-23T08:24:15+00:00",
         "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
-        "summary": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attacks targeting information and communication technology (ICT) assets in the country.\n\nThis unsanctioned activity has resulted in unauthorized financial transactions at banking and financial services entities, as well as technology service providers",
-        "category": "Threat Actors"
+        "summary": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attacks targeting information and communication technology (ICT) assets in the country. This unsanctioned activity has resulted in unauthorized financial transactions at banking and financial services entities, as well as technology service providers",
+        "category": "Threat Actors",
+        "category_reason": "Score: 6. Summary matched: threat actor (+1); Summary matched: threat actors (+1); Title matched: cyber attacks (+4)"
     },
     {
         "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
         "source": "The Hacker News",
         "published": "2026-11-22T05:06:55+00:00",
         "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-        "summary": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week.\n\nSome of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored.\n\nOpenRouter, a gateway that routes customers' AI requests to a pool of",
-        "category": "Other"
+        "summary": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored. OpenRouter, a gateway that routes customers' AI requests to a pool of",
+        "category": "Data Breaches",
+        "category_reason": "Score: 8. Title matched: prompt theft (+8)"
     },
     {
         "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
         "source": "The Hacker News",
         "published": "2026-11-22T05:03:41+00:00",
         "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-        "summary": "A now-patched flaw in Ghostscript allows a crafted file to escape the program's security sandbox and run commands on the server that processes it.\n\nGhostscript is the interpreter that many Linux servers use to convert uploaded PDFs, PostScript files, and images into other formats, often without the application calling it directly.\n\nSecurity firm pwn.ai showed this week that ordinary upload,",
-        "category": "Vulnerabilities"
+        "summary": "A now-patched flaw in Ghostscript allows a crafted file to escape the program's security sandbox and run commands on the server that processes it. Ghostscript is the interpreter that many Linux servers use to convert uploaded PDFs, PostScript files, and images into other formats, often without the application calling it directly. Security firm pwn.ai showed this week that ordinary upload,",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Title matched: rce (+4)"
     },
     {
         "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
         "source": "The Hacker News",
         "published": "2026-11-21T11:53:07+00:00",
         "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
-        "summary": "A malicious webpage could extract a Meta Muse user's private conversations and stored memories from the assistant without triggering any approval prompt, researchers have shown.\n\nThe same attack could be extended to reach the credentials Muse stores for the user's connected accounts.\n\nThe work was a laboratory demonstration, not an attack on real users, and it stayed inside the individual user's",
-        "category": "Other"
+        "summary": "A malicious webpage could extract a Meta Muse user's private conversations and stored memories from the assistant without triggering any approval prompt, researchers have shown. The same attack could be extended to reach the credentials Muse stores for the user's connected accounts. The work was a laboratory demonstration, not an attack on real users, and it stayed inside the individual user's",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: malicious webpage (+8)"
     },
     {
         "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
         "source": "The Hacker News",
         "published": "2026-11-21T11:05:53+00:00",
         "url": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
-        "summary": "A malicious OpenPGP key with an unusually long user ID can trigger a critical memory bug in GPGME, the standard library that programs use to work with GnuPG.\n\nThe GnuPG project warned yesterday that the flaw could be used to steal data from affected applications and has released fixed versions.\n\nThe bug, tracked as CVE-2026-129975, affects all software that uses GPGME before version 2.3.0,",
-        "category": "Vulnerabilities"
+        "summary": "A malicious OpenPGP key with an unusually long user ID can trigger a critical memory bug in GPGME, the standard library that programs use to work with GnuPG. The GnuPG project warned yesterday that the flaw could be used to steal data from affected applications and has released fixed versions. The bug, tracked as CVE-2026-129975, affects all software that uses GPGME before version 2.3.0,",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: critical memory bug (+3); Summary matched: cve- (+1); Summary matched: memory bug (+1)"
     },
     {
         "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
         "source": "The Hacker News",
         "published": "2026-11-21T11:03:17+00:00",
         "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
-        "summary": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week.\n\nThe flaw allows an attacker with no account to write files outside the server's storage folder, and it affects MONAI Label 0.8.5 and earlier in the default setup,",
-        "category": "Vulnerabilities"
+        "summary": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week. The flaw allows an attacker with no account to write files outside the server's storage folder, and it affects MONAI Label 0.8.5 and earlier in the default setup,",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: zero-day (+4); Summary matched: rce (+1)"
     },
     {
         "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
         "source": "The Hacker News",
         "published": "2026-11-21T08:49:20+00:00",
         "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
-        "summary": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android and iOS devices, but conceded that the protection is \"incomplete.\"\n\nThe feature applies to agentic systems built into iOS 27 and on Android versions where the encrypted messaging platform can detect an AI assistant attempting to read the Signal",
-        "category": "Other"
+        "summary": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android and iOS devices, but conceded that the protection is \"incomplete.\" The feature applies to agentic systems built into iOS 27 and on Android versions where the encrypted messaging platform can detect an AI assistant attempting to read the Signal",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
         "source": "The Hacker News",
         "published": "2026-11-21T08:49:13+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
-        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, and Broadcom VMware vCenter to its Known Exploited Vulnerabilities (KEV), citing evidence of active exploitation.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-129448 (CVSS score: 9.8) - A deserialization of untrusted data vulnerability in",
-        "category": "Vulnerabilities"
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, and Broadcom VMware vCenter to its Known Exploited Vulnerabilities (KEV), citing evidence of active exploitation. The vulnerabilities are listed below - CVE-2026-129448 (CVSS score: 9.8) - A deserialization of untrusted data vulnerability in",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 7. Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
         "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
         "source": "The Hacker News",
         "published": "2026-11-20T17:57:20+00:00",
         "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-        "summary": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages.\n\nThe vulnerability, tracked as CVE-2026-23871 (CVSS score: 3.5), has been described as a case of incomplete validation of external ad-reply URLs in WhatsApp for Android and WhatsApp Business for Android before 2.26.17.4.",
-        "category": "Vulnerabilities"
+        "summary": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages. The vulnerability, tracked as CVE-2026-23871 (CVSS score: 3.5), has been described as a case of incomplete validation of external ad-reply URLs in WhatsApp for Android and WhatsApp Business for Android before 2.26.17.4.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Title matched: security flaw (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
     },
     {
         "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
         "source": "The Hacker News",
         "published": "2026-11-20T16:58:16+00:00",
         "url": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
-        "summary": "Cybersecurity researchers have disclosed details of a previously unknown Android malware framework called Bazuka that offers large language model (LLM) integration for victim management and control at scale.\n\nDutch mobile security company ThreatFabric said it discovered the threat in late October 2026 during an investigation into an NFC-relay banking Trojan.\n\n\"Bazuka is a full malware framework,",
-        "category": "Malware"
+        "summary": "Cybersecurity researchers have disclosed details of a previously unknown Android malware framework called Bazuka that offers large language model (LLM) integration for victim management and control at scale. Dutch mobile security company ThreatFabric said it discovered the threat in late October 2026 during an investigation into an NFC-relay banking Trojan. \"Bazuka is a full malware framework,",
+        "category": "Data Breaches",
+        "category_reason": "Score: 8. Title matched: credential theft (+8)"
     },
     {
         "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
         "source": "The Hacker News",
         "published": "2026-11-20T12:20:00+00:00",
         "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-        "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean.\n\nOn a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, affects only hosts with AMD processors and nested virtualization enabled.\n\nFixed kernels shipped",
-        "category": "Vulnerabilities"
+        "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean. On a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, affects only hosts with AMD processors and nested virtualization enabled. Fixed kernels shipped",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Title matched: cve- (+4)"
     },
     {
         "title": "The Path to AI Autonomy in the SOC",
         "source": "The Hacker News",
         "published": "2026-11-20T12:00:00+00:00",
         "url": "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html",
-        "summary": "Security leaders are about to hand AI agents a lot more authority. In a recent a16z survey of CISOs at organizations with more than 1,000 employees, 36% said they are comfortable today letting AI agents act autonomously on low-risk security actions. In 12 months from now, 60% expect to be comfortable at that level. Overall, AI SOC was the highest ranking initiative for 2027.\n\nThe pressure",
-        "category": "Other"
+        "summary": "Security leaders are about to hand AI agents a lot more authority. In a recent a16z survey of CISOs at organizations with more than 1,000 employees, 36% said they are comfortable today letting AI agents act autonomously on low-risk security actions. In 12 months from now, 60% expect to be comfortable at that level. Overall, AI SOC was the highest ranking initiative for 2027. The pressure",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
         "source": "The Hacker News",
         "published": "2026-11-20T10:38:22+00:00",
         "url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
-        "summary": "SonicWall has urged all customers still running Generation 6 firewalls to retire and replace them immediately and stop exposing the devices on the internet edge, citing security risks fueled by AI-assisted attacks.\n\n\"Attackers now use automation and AI to find and exploit unsupported edge devices faster than ever,\" SonicWall said. \"We expect internet-facing Gen 6 firewalls to be actively",
-        "category": "Vulnerabilities"
+        "summary": "SonicWall has urged all customers still running Generation 6 firewalls to retire and replace them immediately and stop exposing the devices on the internet edge, citing security risks fueled by AI-assisted attacks. \"Attackers now use automation and AI to find and exploit unsupported edge devices faster than ever,\" SonicWall said. \"We expect internet-facing Gen 6 firewalls to be actively",
+        "category": "Security Updates",
+        "category_reason": "Score: 4. Title matched: security patch (+4)"
     },
     {
         "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
         "source": "The Hacker News",
         "published": "2026-11-20T10:32:50+00:00",
         "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
-        "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit.\n\nThe activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerability that could allow an unauthenticated, remote attacker with network access to a Cisco Expressway",
-        "category": "Vulnerabilities"
+        "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit. The activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerability that could allow an unauthenticated, remote attacker with network access to a Cisco Expressway",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 7. Summary matched: vulnerability (+1); Summary matched: security flaw (+1); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
         "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
         "source": "The Hacker News",
         "published": "2026-11-20T09:38:15+00:00",
         "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
-        "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026.\n\nThe vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of authentication bypass in the VMware Directory Service that could be exploited to gain unauthorized",
-        "category": "Vulnerabilities"
+        "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026. The vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of authentication bypass in the VMware Directory Service that could be exploited to gain unauthorized",
+        "category": "Threat Actors",
+        "category_reason": "Score: 14. Title matched: china-linked hackers (+8); Summary matched: cyber espionage (+1); Summary matched: espionage group (+1); Title matched: china-linked (+4)"
     },
     {
         "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
         "source": "The Hacker News",
         "published": "2026-11-20T07:11:39+00:00",
         "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
-        "summary": "Threat actors have been observed using the ROMULUS ClickFix malware delivery platform to deliver a previously undocumented remote access trojan (RAT) that shares similarities with CNCMachineRMS.\n\n\"ROMULUS likely operates as a delivery service, distributing CNCMachineRMS and Legion Loader through separate chains while retaining ClickFix and signed binary sideloading techniques,\" Blackpoint",
-        "category": "Malware"
+        "summary": "Threat actors have been observed using the ROMULUS ClickFix malware delivery platform to deliver a previously undocumented remote access trojan (RAT) that shares similarities with CNCMachineRMS. \"ROMULUS likely operates as a delivery service, distributing CNCMachineRMS and Legion Loader through separate chains while retaining ClickFix and signed binary sideloading techniques,\" Blackpoint",
+        "category": "Malware",
+        "category_reason": "Score: 6. Summary matched: remote access trojan (+3); Summary matched: malware (+1); Summary matched: trojan (+1); Summary matched: loader (+1)"
     },
     {
         "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
         "source": "The Hacker News",
         "published": "2026-11-20T05:30:01+00:00",
         "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
-        "summary": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the machine.\n\nThe method was posted yesterday by a researcher who uses the handles MSNightmare and Nightmare Eclipse, and the endpoint-security firm ThreatLocker",
-        "category": "Vulnerabilities"
+        "summary": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the machine. The method was posted yesterday by a researcher who uses the handles MSNightmare and Nightmare Eclipse, and the endpoint-security firm ThreatLocker",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 9. Summary matched: zero-day (+1); Title matched: 0-day (+4); Title matched: unpatched (+4)"
     },
     {
         "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
         "source": "The Hacker News",
         "published": "2026-11-19T18:47:58+00:00",
         "url": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
-        "summary": "The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that's the problem. This week's stories show how ordinary things are being used to steal data, spread malware, and get people to hand over access.\n\nThere's another shift worth watching. AI is making some attacks easier",
-        "category": "Vulnerabilities"
+        "summary": "The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that's the problem. This week's stories show how ordinary things are being used to steal data, spread malware, and get people to hand over access. There's another shift worth watching. AI is making some attacks easier",
+        "category": "Malware",
+        "category_reason": "Score: 8. Title matched: malware (+4); Title matched: loader (+4)"
     },
     {
         "title": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
         "source": "The Hacker News",
         "published": "2026-11-19T16:59:56+00:00",
         "url": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
-        "summary": "PHP's default file-based session storage can be made to return objects an attacker chose, by cutting off a session write at the right moment. When combined with a second weakness, such as a suitable gadget chain in the app, those objects can allow the attacker to run code on the server.\n\nToday's PHP releases fix the flaw, called phpAfterShell.\n\nThe flaw is tracked as CVE-2026-126714 and rated",
-        "category": "Vulnerabilities"
+        "summary": "PHP's default file-based session storage can be made to return objects an attacker chose, by cutting off a session write at the right moment. When combined with a second weakness, such as a suitable gadget chain in the app, those objects can allow the attacker to run code on the server. Today's PHP releases fix the flaw, called phpAfterShell. The flaw is tracked as CVE-2026-126714 and rated",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: cve- (+1); Title matched: session flaw (+4)"
     },
     {
         "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
         "source": "The Hacker News",
         "published": "2026-11-19T15:18:07+00:00",
         "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
-        "summary": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560.\n\nThe release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all supported PHP versions under specific",
-        "category": "Vulnerabilities"
+        "summary": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all supported PHP versions under specific",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 16. Title matched: remote code execution (+8); Summary matched: vulnerabilities (+1); Summary matched: security flaw (+1); Summary matched: cve- (+1); Summary matched: exploit (+1); Title matched: remote code execution (+4)"
     },
     {
         "title": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
         "source": "The Hacker News",
         "published": "2026-11-19T15:11:06+00:00",
         "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
-        "summary": "A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today.\n\nFixed versions are out for all supported branches, and the company lists no workaround. vCenter is the central console for managing an organization's ESX hosts and virtual machines.\n\nThe",
-        "category": "Vulnerabilities"
+        "summary": "A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today. Fixed versions are out for all supported branches, and the company lists no workaround. vCenter is the central console for managing an organization's ESX hosts and virtual machines. The",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Title matched: zero-day (+4)"
     },
     {
         "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
         "source": "The Hacker News",
         "published": "2026-11-19T14:33:06+00:00",
         "url": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
-        "summary": "Under specific conditions, a critical vulnerability in Drupal core can allow an attacker without login credentials to use the built-in installer to attempt to reinstall a site.\n\nThat can lead to a site takeover or remote code execution, and the project rates the vulnerable configurations as uncommon. Fixed releases for all supported branches shipped yesterday.\n\nThe Drupal Security Team disclosed",
-        "category": "Vulnerabilities"
+        "summary": "Under specific conditions, a critical vulnerability in Drupal core can allow an attacker without login credentials to use the built-in installer to attempt to reinstall a site. That can lead to a site takeover or remote code execution, and the project rates the vulnerable configurations as uncommon. Fixed releases for all supported branches shipped yesterday. The Drupal Security Team disclosed",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 12. Summary matched: remote code execution (+3); Summary matched: critical vulnerability (+3); Summary matched: vulnerability (+1); Summary matched: remote code execution (+1); Title matched: unauthenticated attacker (+4)"
     },
     {
         "title": "Everything Is a Web Application, Including Your Firewall",
@@ -293,119 +329,134 @@
         "published": "2026-11-19T11:52:23+00:00",
         "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
         "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. The disclosure itself went a little wrong.",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Summary matched: vulnerabilities (+1); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: php2shell (+1)"
     },
     {
         "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
         "source": "The Hacker News",
         "published": "2026-11-19T09:31:26+00:00",
         "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
-        "summary": "N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs.\n\n\"We have taken steps to mitigate the threat and are continuing to harden our services to reduce the risk of recurrence,\" N-able said.\n\n\"The investigation is ongoing, but at this time we",
-        "category": "Data Breaches"
+        "summary": "N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. \"We have taken steps to mitigate the threat and are continuing to harden our services to reduce the risk of recurrence,\" N-able said. \"The investigation is ongoing, but at this time we",
+        "category": "Data Breaches",
+        "category_reason": "Score: 8. Title matched: hackers breach n-able (+8)"
     },
     {
         "title": "Ruby Ships Fixes for 7 Flaws, Including Critical Ruby2Shell, Said to Hit Default Rails Apps Pre-Auth",
         "source": "The Hacker News",
         "published": "2026-11-19T08:42:11+00:00",
         "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
-        "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine.\n\n\"We are aware of PoCs that prove some of them can be used to trigger remote code execution,\" the maintainers said.\n\nThe project released fixed versions",
-        "category": "Vulnerabilities"
+        "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove some of them can be used to trigger remote code execution,\" the maintainers said. The project released fixed versions",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: remote code execution (+3); Summary matched: exploit (+1); Summary matched: remote code execution (+1)"
     },
     {
         "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
         "source": "The Hacker News",
         "published": "2026-11-19T08:14:00+00:00",
         "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
-        "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL.\n\nThe exploits, published yesterday, are the researcher's proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no",
-        "category": "Vulnerabilities"
+        "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the researcher's proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: rce (+4); Title matched: exploit (+4)"
     },
     {
         "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
         "source": "The Hacker News",
         "published": "2026-11-19T08:00:00+00:00",
         "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
-        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe vulnerabilities are listed below -",
-        "category": "Vulnerabilities"
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities are listed below -",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: exploit (+4)"
     },
     {
         "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
         "source": "The Hacker News",
         "published": "2026-11-19T04:33:46+00:00",
         "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
-        "summary": "The maintainers of the PHP programming language on Wednesday issued an advisory announcing an upcoming security release that addresses critical flaws.\n\nThe release is scheduled for November 19, 2026, between 2 and 2:30 p.m. UTC.\n\n\"These releases are part of PHP's regular four-week release cycle and will address security vulnerabilities affecting all supported PHP versions,\" the maintainers said.",
-        "category": "Vulnerabilities"
+        "summary": "The maintainers of the PHP programming language on Wednesday issued an advisory announcing an upcoming security release that addresses critical flaws. The release is scheduled for November 19, 2026, between 2 and 2:30 p.m. UTC. \"These releases are part of PHP's regular four-week release cycle and will address security vulnerabilities affecting all supported PHP versions,\" the maintainers said.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: security flaw (+4)"
     },
     {
         "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
         "source": "The Hacker News",
         "published": "2026-11-18T18:31:17+00:00",
         "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-        "summary": "A flaw in NGINX's HTTP/2 support can allow an attacker to run code on servers with HTTP/2 enabled, without needing to log in.\n\nThe decade-old flaw, CVE-2026-123007, dubbed \"nginx2root,\" has been present in NGINX's open-source code since version 1.9.5, released on September 22, 2015. Fixed versions 1.31.9 and 1.30.7 came out today.\n\nF5, the company behind NGINX, says attackers can run code where",
-        "category": "Vulnerabilities"
+        "summary": "A flaw in NGINX's HTTP/2 support can allow an attacker to run code on servers with HTTP/2 enabled, without needing to log in. The decade-old flaw, CVE-2026-123007, dubbed \"nginx2root,\" has been present in NGINX's open-source code since version 1.9.5, released on September 22, 2015. Fixed versions 1.31.9 and 1.30.7 came out today. F5, the company behind NGINX, says attackers can run code where",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 7. Summary matched: rce (+1); Summary matched: cve- (+1); Summary matched: nginx2root (+1); Title matched: unauthenticated attacker (+4)"
     },
     {
         "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
         "source": "The Hacker News",
         "published": "2026-11-18T18:15:39+00:00",
         "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
-        "summary": "Six critical vulnerabilities in F5 BIG-IP allow an attacker to crash the Traffic Management Microkernel (TMM) without logging in, disrupting traffic until the TMM restarts.\n\nEach flaw needs a specific setup on a virtual server: an iRule that uses a particular command, or an APM policy that includes two particular kinds of agent.\n\nF5, which makes BIG-IP, disclosed the flaws today and says they",
-        "category": "Vulnerabilities"
+        "summary": "Six critical vulnerabilities in F5 BIG-IP allow an attacker to crash the Traffic Management Microkernel (TMM) without logging in, disrupting traffic until the TMM restarts. Each flaw needs a specific setup on a virtual server: an iRule that uses a particular command, or an APM policy that includes two particular kinds of agent. F5, which makes BIG-IP, disclosed the flaws today and says they",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: rce (+4)"
     },
     {
         "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
         "source": "The Hacker News",
         "published": "2026-11-18T17:10:45+00:00",
         "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
-        "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF)\n\nThe vulnerability, tracked as CVE-2026-129448 (CVSS score: 9.8), is a case of unauthenticated deserialization in the XML-RPC endpoint that could lead to remote code execution.\n\n\"Deserialization of Untrusted",
-        "category": "Vulnerabilities"
+        "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS score: 9.8), is a case of unauthenticated deserialization in the XML-RPC endpoint that could lead to remote code execution. \"Deserialization of Untrusted",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 15. Summary matched: remote code execution (+3); Summary matched: vulnerability (+1); Summary matched: security flaw (+1); Title matched: rce (+4); Summary matched: cve- (+1); Title matched: exploit (+4); Summary matched: remote code execution (+1)"
     },
     {
         "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
         "source": "The Hacker News",
         "published": "2026-11-18T14:11:28+00:00",
         "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-        "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines.\n\n\"When attackers are exposed, the cheap response is to rotate,\" Bitdefender said in a technical report shared with The Hacker News. \"A file hash changes with every recompile, a domain costs a few",
-        "category": "Malware"
+        "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap response is to rotate,\" Bitdefender said in a technical report shared with The Hacker News. \"A file hash changes with every recompile, a domain costs a few",
+        "category": "Malware",
+        "category_reason": "Score: 4. Title matched: malware (+4)"
     },
     {
         "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
         "source": "The Hacker News",
         "published": "2026-11-18T12:28:30+00:00",
         "url": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
-        "summary": "On AMD-based PCs and some Intel PCs, the TPM lockout for Windows Hello and BitLocker PINs can be reset by someone who opens the PC's case, researchers at Technische Universität Berlin say.\n\nThat leaves short PINs open to guessing. In lab tests, the researchers found a four-digit Hello PIN on an AMD laptop and a 6-digit BitLocker PIN on an Intel laptop this way.\n\nBoth PINs were set by the",
-        "category": "Vulnerabilities"
+        "summary": "On AMD-based PCs and some Intel PCs, the TPM lockout for Windows Hello and BitLocker PINs can be reset by someone who opens the PC's case, researchers at Technische Universität Berlin say. That leaves short PINs open to guessing. In lab tests, the researchers found a four-digit Hello PIN on an AMD laptop and a 6-digit BitLocker PIN on an Intel laptop this way. Both PINs were set by the",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: bypasses tpm lockout (+8)"
     },
     {
         "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
         "source": "The Hacker News",
         "published": "2026-11-18T12:15:00+00:00",
         "url": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
-        "summary": "TL;DR\n\n\n  Attackers move first. On average, exploitation now starts before a patch exists (Mandiant M-Trends 2026). In 1H 2026, 23% of vulnerabilities VulnCheck added to its exploited list were hit on or before disclosure day.\n  AI pentesting vendors aren't interchangeable. Most look convincing in a demo. The gaps show up in your logged-in flows, your coverage, and your production safety.\n  Make",
-        "category": "Vulnerabilities"
+        "summary": "TL;DR Attackers move first. On average, exploitation now starts before a patch exists (Mandiant M-Trends 2026). In 1H 2026, 23% of vulnerabilities VulnCheck added to its exploited list were hit on or before disclosure day. AI pentesting vendors aren't interchangeable. Most look convincing in a demo. The gaps show up in your logged-in flows, your coverage, and your production safety. Make",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
         "source": "The Hacker News",
         "published": "2026-11-18T11:55:49+00:00",
         "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
-        "summary": "A Java flaw called Java4Shell can let attackers without an account run their own code on Jira, Jenkins, Keycloak, and three other widely used applications, says Calif, the security research firm that disclosed it this week.\n\nThe flaw is present in Java 17.0.6 and later, and the vulnerable code runs only on x86-64 Intel and AMD chips that support the AVX-512 VBMI feature.\n\nTracked as",
-        "category": "Vulnerabilities"
+        "summary": "A Java flaw called Java4Shell can let attackers without an account run their own code on Jira, Jenkins, Keycloak, and three other widely used applications, says Calif, the security research firm that disclosed it this week. The flaw is present in Java 17.0.6 and later, and the vulnerable code runs only on x86-64 Intel and AMD chips that support the AVX-512 VBMI feature. Tracked as",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: rce (+4); Title matched: cve- (+4)"
     },
     {
         "title": "Quality Isn’t The Main Worry About AI Pentesting — Data Privacy and Production Safety Are",
         "source": "The Hacker News",
         "published": "2026-11-18T11:03:57+00:00",
         "url": "https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html",
-        "summary": "AI is speeding up how software is built, which means more code, more changes, and more chances for vulnerabilities to reach production. It's speeding up how attackers find and exploit them too, with time-to-exploit now down to a single day. Security testing has to keep up with both.\n\nAI pentesting has emerged as a way to run in-depth tests whenever teams need them, instead of waiting for the",
-        "category": "Vulnerabilities"
+        "summary": "AI is speeding up how software is built, which means more code, more changes, and more chances for vulnerabilities to reach production. It's speeding up how attackers find and exploit them too, with time-to-exploit now down to a single day. Security testing has to keep up with both. AI pentesting has emerged as a way to run in-depth tests whenever teams need them, instead of waiting for the",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
         "source": "BleepingComputer",
         "published": "2026-11-23T20:54:51+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-        "summary": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data. [...]",
-        "category": "Data Breaches"
+        "summary": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data. [...]",
+        "category": "Data Breaches",
+        "category_reason": "Score: 8. Title matched: data breach (+8)"
     },
     {
         "title": "OpenRouter drops AI providers over leaked prompts and secrets",
@@ -413,7 +464,8 @@
         "published": "2026-11-23T20:00:20+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
         "summary": "OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data. [...]",
-        "category": "Other"
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
@@ -421,7 +473,8 @@
         "published": "2026-11-23T19:42:20+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
         "summary": "Microsoft is warning customers that a security vulnerability in Azure API Management (APIM) Classic tiers was exploited to steal stored API credentials, with Norwegian authorities linking the flaw to cyberattacks against energy companies. [...]",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Summary matched: security vulnerability (+3); Summary matched: vulnerability (+1); Title matched: exploit (+4)"
     },
     {
         "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
@@ -429,7 +482,8 @@
         "published": "2026-11-23T18:38:40+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
         "summary": "LaLiga, Spain's top men's football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs. [...]",
-        "category": "Data Breaches"
+        "category": "Data Breaches",
+        "category_reason": "Score: 4. Summary matched: data breach (+3); Summary matched: personal information (+1)"
     },
     {
         "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
@@ -437,7 +491,8 @@
         "published": "2026-11-23T16:50:01+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
         "summary": "A cyberattack disrupted operations at B2B top-up solutions provider GlobeTopper, causing an estimated $2.5 million in lost revenue, while the attacker redeemed digital gift cards worth $70,000. [...]",
-        "category": "Other"
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "AI Agents Are Creating a Shared Responsibility Gap",
@@ -445,7 +500,8 @@
         "published": "2026-11-23T15:00:10+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/",
         "summary": "AI agents operate across multiple platforms, creating security gaps when no single vendor can see or control their actions. Token Security examines the shared responsibility problem and explains how organizations can better manage agent identities, permissions, and accountability. [...]",
-        "category": "Other"
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Microsoft testing fix for Windows 11 Bluetooth audio quality drops",
@@ -453,7 +509,8 @@
         "published": "2026-11-23T13:28:45+00:00",
         "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-fix-for-windows-11-bluetooth-audio-quality-drops/",
         "summary": "Microsoft is working to fix a long-standing Windows issue that has been causing significant audio quality drops for Bluetooth headphone users. [...]",
-        "category": "Other"
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Call center operator gets 8 years for helping scam 30,000 Americans",
@@ -461,7 +518,8 @@
         "published": "2026-11-23T12:02:23+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/call-center-operator-gets-8-years-for-helping-scam-30-000-americans/",
         "summary": "A Peruvian call center operator was sentenced to eight years in prison for helping steal millions of dollars from over 30,000 Spanish-speaking US residents in a years-long government-impersonation fraud scheme. [...]",
-        "category": "Other"
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Microsoft confirms Windows printing issues affecting Forcepoint users",
@@ -469,7 +527,8 @@
         "published": "2026-11-23T09:11:15+00:00",
         "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-printing-issues-after-kb5132043-windows-hotpatch/",
         "summary": "Microsoft confirmed printing issues on systems running Forcepoint DLP software after installing the KB5132043 November 2026 Windows 11 hotpatch. [...]",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 4. Title matched: rce (+4)"
     },
     {
         "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
@@ -477,7 +536,8 @@
         "published": "2026-11-23T07:44:19+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
         "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers are now exploiting a recently patched critical Cisco Expressway vulnerability in the wild. [...]",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 9. Summary matched: vulnerability (+1); Title matched: rce (+4); Title matched: exploit (+4)"
     },
     {
         "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
@@ -485,7 +545,8 @@
         "published": "2026-11-22T18:45:37+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
         "summary": "GL.iNet has confirmed that hackers exploited a vulnerability in its cloud remote management services to install custom malware on customers' routers and KVM devices, with some affected users reporting backdoors and reverse shells giving remote access to infected devices. [...]",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerability (+1); Title matched: exploit (+4)"
     },
     {
         "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
@@ -493,7 +554,8 @@
         "published": "2026-11-22T15:43:04+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
         "summary": "E-commerce platform Cleverbridge is warning that hackers breached its systems and stole customers' payment card information, including credit card numbers and CVV security codes. [...]",
-        "category": "Vulnerabilities"
+        "category": "Data Breaches",
+        "category_reason": "Score: 19. Title matched: data breach (+8); Title matched: credit card numbers (+8); Summary matched: payment card information (+3)"
     },
     {
         "title": "Signal to block Siri, Gemini AI from capturing chats on iOS, Android",
@@ -501,7 +563,8 @@
         "published": "2026-11-22T15:15:25+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/",
         "summary": "Signal has announced new protections that block screenshots on iOS 27 and prevent AI assistants from capturing conversations on supported Android devices. [...]",
-        "category": "Other"
+        "category": "Threat Actors",
+        "category_reason": "Score: 4. Title matched: apt (+4)"
     },
     {
         "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
@@ -509,7 +572,8 @@
         "published": "2026-11-21T22:59:58+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
         "summary": "Rackspace warned customers that hackers breached its Rackspace Spot cloud platform using compromised credentials, allowing them to deploy unauthorized workloads and access Kubernetes secrets in customer clusters. [...]",
-        "category": "Data Breaches"
+        "category": "Data Breaches",
+        "category_reason": "Score: 13. Title matched: rackspace spot breach (+8); Summary matched: access kubernetes secrets (+3); Summary matched: compromised credentials (+1); Summary matched: unauthorized workloads (+1)"
     },
     {
         "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
@@ -517,6 +581,349 @@
         "published": "2026-11-21T18:01:58+00:00",
         "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
         "summary": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information. [...]",
-        "category": "Vulnerabilities"
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Summary matched: vulnerability (+1); Title matched: exploit (+4)"
+    },
+    {
+        "title": "The internet needs a nap (and you do, too)",
+        "source": "Cisco Talos",
+        "published": "2026-11-19T19:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/the-internet-needs-a-nap-and-you-do-too/",
+        "summary": "Bill takes a break from the non-stop breaking news to promote prioritizing environmental awareness and team stability over reactive patching.",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "The challenge of defending against bulletproof dead drops on public blockchains",
+        "source": "Cisco Talos",
+        "published": "2026-11-18T11:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/the-challenge-of-defending-against-bulletproof-dead-drops-on-public-blockchains/",
+        "summary": "The evolution of malware command-and-control (C2) infrastructure has shifted away from fragile, centralized servers and hardcoded domains toward resilient, decentralized blockchain networks that eliminate single points of failure.",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "UAT-12643: Suspected North Korea-aligned actor blends blockchain resilience with targeted infostealing",
+        "source": "Cisco Talos",
+        "published": "2026-11-18T11:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing/",
+        "summary": "Cisco Talos discovered malicious infrastructure associated with a financially motivated threat group we are tracking as UAT-12643.",
+        "category": "Threat Actors",
+        "category_reason": "Score: 12. Title matched: north korea-aligned (+8); Title matched: north korea (+4)"
+    },
+    {
+        "title": "CVE-2026-114938: Critical vulnerability in OpenJDK Java",
+        "source": "Cisco Talos",
+        "published": "2026-11-18T01:53:03+00:00",
+        "url": "https://blog.talosintelligence.com/java4shell/",
+        "summary": "Cisco Talos is tracking the disclosure of a critical vulnerability in OpenJDK Java (CVE-2026-114938), dubbed “Java4Shell,” with a CVSS 4.0 score of 9.2 that may lead to unauthenticated remote code execution (RCE).",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 21. Summary matched: remote code execution (+3); Title matched: critical vulnerability (+8); Title matched: vulnerability (+4); Summary matched: rce (+1); Title matched: cve- (+4); Summary matched: remote code execution (+1)"
+    },
+    {
+        "title": "Dialing for Data: Inside the Com’s High-Profile Heists",
+        "source": "Palo Alto Unit 42",
+        "published": "2026-11-20T22:00:25+00:00",
+        "url": "https://unit42.paloaltonetworks.com/com-affiliate-vishing-attacks/",
+        "summary": "Our analysis of Com affiliate vishing attacks, cloud data theft and extortion campaigns targeting healthcare and finance, with actionable defense guidance. The post Dialing for Data: Inside the Com’s High-Profile Heists appeared first on Unit 42 .",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us",
+        "source": "Palo Alto Unit 42",
+        "published": "2026-11-17T20:43:14+00:00",
+        "url": "https://unit42.paloaltonetworks.com/optimjack-supply-chain-attack/",
+        "summary": "The OPTIMJACK supply chain attack demonstrates how a compromised vendor script can expose websites, highlighting the need for strict segmentation. The post Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us appeared first on Unit 42 .",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "ZDI-26-1039: Oracle PeopleSoft register Incorrect Authorization Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-19T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1039/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle PeopleSoft. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.9. The following CVEs are assigned: CVE-2026-35273.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1038: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP UpdateFirmware Out-Of-Bounds Write Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-19T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1038/",
+        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131813.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1037: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Authentication Bypass Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1037/",
+        "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131809.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 18. Title matched: authentication bypass vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: authentication bypass (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1036: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Wi-Fi Configuration Server Missing Authentication Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1036/",
+        "summary": "This vulnerability allows network-adjacent attackers to modify Wi-Fi configuration on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-131808.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1035: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Download of Code Without Integrity Check Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1035/",
+        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131810.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1034: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A FTP URL Path Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1034/",
+        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131812.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1033: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP GetConfiguration Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1033/",
+        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131807.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1032: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Hard-Coded Credentials Authentication Bypass Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1032/",
+        "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131811.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 18. Title matched: authentication bypass vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: authentication bypass (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1031: (0Day) LiteLLM MCP Command Injection Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1031/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1030: (0Day) G DATA Total Security TSNxGService Link Following Local Privilege Escalation Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1030/",
+        "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19776.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 18. Title matched: privilege escalation vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: privilege escalation (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1029: (0Day) G DATA Total Security AVKProxy Link Following Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1029/",
+        "summary": "This vulnerability allows local attackers to create a denial-of-service condition on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-19777.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1028: (0Day) G DATA Total Security Backup Service Uncontrolled Search Path Element Local Privilege Escalation Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1028/",
+        "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-19779.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 18. Title matched: privilege escalation vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: privilege escalation (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1027: (0Day) Open Robotics RViz fillIndexBuffer Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1027/",
+        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 23. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1026: (0Day) Open Robotics RViz XYZPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1026/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1025: (0Day) Open Robotics RViz AxisColorPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1025/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1024: (0Day) Open Robotics RViz RGBF32PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1024/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1023: (0Day) Open Robotics RViz RGB8PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1023/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1022: (0Day) Open Robotics RViz IntensityPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1022/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1021: (0Day) Open Robotics RViz MapDisplay OccupancyGridUpdate Out-Of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1021/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1020: (0Day) Open Robotics RViz PointCloud2Display PointField Out-of-Bounds Read Denial-of-Service Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1020/",
+        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1019: (0Day) Open Robotics ROS 2 sros2 load_policy XML External Entity Processing Information Disclosure Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1019/",
+        "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Open Robotics ROS 2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: exploit (+1)"
+    },
+    {
+        "title": "ZDI-26-1018: (0Day) Krita TIF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1018/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 23. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1017: (0Day) Krita HEIC File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1017/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1016: (0Day) Krita EXR File Parsing Integer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1016/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1015: (0Day) Krita HEIC File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1015/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 23. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1014: (0Day) Krita TIFF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1014/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1013: (0Day) Krita PSB File Parsing Integer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1013/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1012: (0Day) Krita ASL File Parsing Integer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1012/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 19. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1011: (0Day) Krita ABR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1011/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 23. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "ZDI-26-1010: (0Day) Krita JC2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "source": "Zero Day Initiative",
+        "published": "2026-11-18T06:00:00+00:00",
+        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1010/",
+        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 23. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
+    },
+    {
+        "title": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+        "source": "Krebs on Security",
+        "published": "2026-11-21T00:36:39+00:00",
+        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+        "summary": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting operation found the company was simply paying the attackers for a decryption key and charging victims a markup for work that was never performed.",
+        "category": "Ransomware",
+        "category_reason": "Score: 4. Title matched: ransomware (+4)"
+    },
+    {
+        "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
+        "source": "Krebs on Security",
+        "published": "2026-11-18T02:52:04+00:00",
+        "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
+        "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 6. Summary matched: security vulnerability (+3); Summary matched: vulnerability (+1); Summary matched: rce (+1); Summary matched: exploit (+1)"
     }
 ]
