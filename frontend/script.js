@@ -6,7 +6,7 @@
 // Store all articles loaded from feeds.json
 let allArticles = [];
 
-// Store the currently selected category
+// Store the currently selected category or filter
 let selectedCategory = "All";
 
 // Categories displayed in the dashboard
@@ -15,6 +15,11 @@ const categories = [
         name: "All",
         label: "Total Articles",
         className: "stat-total"
+    },
+    {
+        name: "New24Hours",
+        label: "New Articles (24h)",
+        className: "stat-new"
     },
     {
         name: "Vulnerabilities",
@@ -55,10 +60,37 @@ const categories = [
 
 
 // =========================================
+// NEW ARTICLES TIME FILTER
+// =========================================
+
+function getLast24HoursArticles(articles) {
+
+    const now = Date.now();
+    const last24Hours = now - (24 * 60 * 60 * 1000);
+
+    return articles.filter(article => {
+
+        if (!article.published) {
+            return false;
+        }
+
+        const publishedTime = new Date(article.published).getTime();
+
+        return (
+            !isNaN(publishedTime) &&
+            publishedTime >= last24Hours &&
+            publishedTime <= now
+        );
+    });
+}
+
+
+// =========================================
 // LOAD ARTICLES
 // =========================================
 
 async function loadArticles() {
+
     try {
 
         // Detect whether the dashboard is running on GitHub Pages
@@ -125,14 +157,21 @@ function updateStatistics() {
     // Remove existing statistic cards
     statsGrid.innerHTML = "";
 
-    // Create all eight statistic cards
+    // Create all statistic cards
     categories.forEach(category => {
 
         let count;
 
         if (category.name === "All") {
+
             count = allArticles.length;
+
+        } else if (category.name === "New24Hours") {
+
+            count = getLast24HoursArticles(allArticles).length;
+
         } else {
+
             count = allArticles.filter(article =>
                 article.category === category.name
             ).length;
@@ -140,7 +179,20 @@ function updateStatistics() {
 
         // Create the card
         const card = document.createElement("div");
+
         card.className = `stat-card ${category.className}`;
+
+        // Make the card interactive
+        card.style.cursor = "pointer";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute(
+            "aria-label",
+            `Filter articles by ${category.label}`
+        );
+
+        // Store the filter name on the card
+        card.dataset.statCategory = category.name;
 
         // Create category label
         const label = document.createElement("p");
@@ -154,8 +206,77 @@ function updateStatistics() {
         card.appendChild(label);
         card.appendChild(number);
 
+        // Handle mouse click
+        card.addEventListener("click", () => {
+            selectStatisticCard(category.name);
+        });
+
+        // Handle keyboard interaction
+        card.addEventListener("keydown", event => {
+
+            if (event.key === "Enter" || event.key === " ") {
+
+                event.preventDefault();
+                selectStatisticCard(category.name);
+            }
+        });
+
         // Add card to statistics section
         statsGrid.appendChild(card);
+    });
+
+    updateActiveStatisticCard();
+}
+
+
+// =========================================
+// SELECT STATISTIC CARD
+// =========================================
+
+function selectStatisticCard(categoryName) {
+
+    // Update selected filter
+    selectedCategory = categoryName;
+
+    // Synchronize category buttons
+    const categoryButtons =
+        document.querySelectorAll(".category-btn");
+
+    categoryButtons.forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.category === selectedCategory
+        );
+    });
+
+    // Apply selected filter
+    applyFilters();
+}
+
+
+// =========================================
+// UPDATE ACTIVE STATISTIC CARD
+// =========================================
+
+function updateActiveStatisticCard() {
+
+    const statisticCards =
+        document.querySelectorAll(".stat-card");
+
+    statisticCards.forEach(card => {
+
+        const isSelected =
+            card.dataset.statCategory === selectedCategory;
+
+        // Highlight the currently selected card
+        card.style.outline = isSelected
+            ? "2px solid #ffffff"
+            : "none";
+
+        card.style.outlineOffset = isSelected
+            ? "3px"
+            : "0";
     });
 }
 
@@ -312,10 +433,17 @@ function searchArticles(articles, searchTerm) {
 
 function filterByCategory(articles) {
 
+    // Show all articles
     if (selectedCategory === "All") {
         return articles;
     }
 
+    // Show articles published in the last 24 hours
+    if (selectedCategory === "New24Hours") {
+        return getLast24HoursArticles(articles);
+    }
+
+    // Show articles belonging to the selected category
     return articles.filter(article =>
         article.category === selectedCategory
     );
@@ -335,7 +463,7 @@ function applyFilters() {
         ? searchInput.value
         : "";
 
-    // First filter by category
+    // First filter by selected category or time period
     const categoryFiltered =
         filterByCategory(allArticles);
 
@@ -357,6 +485,9 @@ function applyFilters() {
         articleCount.textContent =
             `Showing ${searchFiltered.length} of ${allArticles.length} articles`;
     }
+
+    // Update selected statistic card
+    updateActiveStatisticCard();
 }
 
 
