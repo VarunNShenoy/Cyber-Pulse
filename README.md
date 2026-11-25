@@ -4,6 +4,11 @@ CyberPulse aggregates cybersecurity news and threat intelligence from **7 truste
 
 Our goal is to provide a centralized view of the latest cybersecurity developments, including vulnerabilities, ransomware, malware, data breaches, threat actors, and security updates.
 
+**Live Dashboard:** [Open CyberPulse](https://varunnshenoy.github.io/Cyber-Pulse/)
+
+## Overview
+
+CyberPulse helps security enthusiasts and professionals stay informed about the latest cybersecurity threats, vulnerabilities, malware, ransomware, and data breaches.
 ---
 
 ## 🌐 News Sources
@@ -85,17 +90,6 @@ CyberPulse uses Python and RSS feeds to automate news collection.
 | Articles Before Deduplication | 103 |
 | Articles After Deduplication | 103 |
 | Duplicates Removed | 0 |
-
----
-
-## 🚫 Removed Sources
-
-| Source | Reason |
-|---|---|
-| CISA | RSS endpoint returned HTTP 403 |
-| National Vulnerability Database (NVD) | Previous RSS endpoint returned HTTP 404 |
-
-These sources may be reconsidered if reliable feed access becomes available.
 
 ---
 
