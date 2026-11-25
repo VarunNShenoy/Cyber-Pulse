@@ -1,5 +1,86 @@
 [
     {
+        "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+        "source": "The Hacker News",
+        "published": "2026-11-25T12:48:54+00:00",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+        "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could enable an attacker to access local text files readable by the GeoServer process or fetch",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 12. Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Summary matched: security flaw (+1); Title matched: rce (+4); Summary matched: cve- (+1); Title matched: exploit (+4)"
+    },
+    {
+        "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
+        "source": "The Hacker News",
+        "published": "2026-11-25T12:30:08+00:00",
+        "url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+        "summary": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Credential Remediation Is Slow When You Don’t Know What Will Break",
+        "source": "The Hacker News",
+        "published": "2026-11-25T11:51:48+00:00",
+        "url": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
+        "summary": "TL;DR More than 64% still valid after four years: GitGuardian’s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Prioritize by impact instead, weighing what a credential can access and whether it leaked publicly, and update the",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+        "source": "The Hacker News",
+        "published": "2026-11-25T11:23:26+00:00",
+        "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-132165 aka Fail2Install (CVSS score: 9.8), is a case of remote code execution (RCE) impacting Drupal core. \"Drupal Core",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 15. Summary matched: remote code execution (+3); Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Title matched: rce (+4); Summary matched: cve- (+1); Title matched: exploit (+4); Summary matched: remote code execution (+1)"
+    },
+    {
+        "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
+        "source": "The Hacker News",
+        "published": "2026-11-25T10:43:07+00:00",
+        "url": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
+        "summary": "A former OpenAI employee accused of concealing a covert recording device at the company's San Francisco offices will be allowed to be released from jail on a $1 million bond, a San Francisco federal court judge ruled Tuesday. Abdulrahman Alfozan, a 35-year-old Saudi national, was arrested on October 9, 2026, for allegedly bugging the artificial intelligence (AI) company's offices with the aim",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+        "source": "The Hacker News",
+        "published": "2026-11-25T09:06:59+00:00",
+        "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+        "summary": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since February 2016, and the team that maintains the service had every server on a patched build within about 15 minutes of the first malicious request. Checks",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 8. Title matched: rce (+4); Title matched: exploit (+4)"
+    },
+    {
+        "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+        "source": "The Hacker News",
+        "published": "2026-11-25T06:50:19+00:00",
+        "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+        "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The intrusion activity, tracked by GreyNoise under the moniker GreyNoise Threat 13 (GT13), is assessed to have targeted organizations in the financial services, energy, government,",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+        "source": "The Hacker News",
+        "published": "2026-11-25T06:37:06+00:00",
+        "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+        "summary": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, healthcare, and legal services located in the U.S., the U.K., and Australia. Other targets include construction,",
+        "category": "Data Breaches",
+        "category_reason": "Score: 4. Title matched: data theft (+4)"
+    },
+    {
+        "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+        "source": "The Hacker News",
+        "published": "2026-11-25T06:21:12+00:00",
+        "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+        "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's account. The WordPress plugins team has proactively detected and blocked the threat before it could be officially released. Visiting each plugin listing now",
+        "category": "Malware",
+        "category_reason": "Score: 4. Title matched: backdoor (+4)"
+    },
+    {
         "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
         "source": "The Hacker News",
         "published": "2026-11-24T16:54:07+00:00",
@@ -369,85 +450,67 @@
         "category_reason": "Score: 8. Title matched: hackers breach n-able (+8)"
     },
     {
-        "title": "Ruby Ships Fixes for 7 Flaws, Including Critical Ruby2Shell, Said to Hit Default Rails Apps Pre-Auth",
-        "source": "The Hacker News",
-        "published": "2026-11-19T08:42:11+00:00",
-        "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
-        "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove some of them can be used to trigger remote code execution,\" the maintainers said. The project released fixed versions",
+        "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T16:13:40+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems. [...]",
         "category": "Vulnerabilities",
-        "category_reason": "Score: 5. Summary matched: remote code execution (+3); Summary matched: exploit (+1); Summary matched: remote code execution (+1)"
+        "category_reason": "Score: 8. Summary matched: critical vulnerability (+3); Summary matched: vulnerability (+1); Title matched: unpatched (+4)"
     },
     {
-        "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
-        "source": "The Hacker News",
-        "published": "2026-11-19T08:14:00+00:00",
-        "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
-        "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the researcher's proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 8. Title matched: rce (+4); Title matched: exploit (+4)"
+        "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T15:00:10+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
+        "summary": "Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitive client data within their own infrastructure. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
-        "source": "The Hacker News",
-        "published": "2026-11-19T08:00:00+00:00",
-        "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
-        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities are listed below -",
+        "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T15:00:00+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
+        "summary": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves. [...]",
         "category": "Vulnerabilities",
         "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: exploit (+4)"
     },
     {
-        "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
-        "source": "The Hacker News",
-        "published": "2026-11-19T04:33:46+00:00",
-        "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
-        "summary": "The maintainers of the PHP programming language on Wednesday issued an advisory announcing an upcoming security release that addresses critical flaws. The release is scheduled for November 19, 2026, between 2 and 2:30 p.m. UTC. \"These releases are part of PHP's regular four-week release cycle and will address security vulnerabilities affecting all supported PHP versions,\" the maintainers said.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: security flaw (+4)"
+        "title": "Microsoft fixes Microsoft 365 bug blocking access to Office apps",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T11:16:32+00:00",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/",
+        "summary": "Earlier this week, Microsoft resolved a known issue that was preventing some Microsoft 365 customers from accessing Office applications. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
-        "source": "The Hacker News",
-        "published": "2026-11-18T18:31:17+00:00",
-        "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-        "summary": "A flaw in NGINX's HTTP/2 support can allow an attacker to run code on servers with HTTP/2 enabled, without needing to log in. The decade-old flaw, CVE-2026-123007, dubbed \"nginx2root,\" has been present in NGINX's open-source code since version 1.9.5, released on September 22, 2015. Fixed versions 1.31.9 and 1.30.7 came out today. F5, the company behind NGINX, says attackers can run code where",
+        "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T10:10:20+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
+        "summary": "The Drupal security team has confirmed that a critical vulnerability that lets attackers hijack unpatched sites has been actively exploited since at least Thursday. [...]",
         "category": "Vulnerabilities",
-        "category_reason": "Score: 7. Summary matched: rce (+1); Summary matched: cve- (+1); Summary matched: nginx2root (+1); Title matched: unauthenticated attacker (+4)"
+        "category_reason": "Score: 13. Summary matched: critical vulnerability (+3); Summary matched: vulnerability (+1); Summary matched: unpatched (+1); Title matched: rce (+4); Title matched: exploit (+4)"
     },
     {
-        "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
-        "source": "The Hacker News",
-        "published": "2026-11-18T18:15:39+00:00",
-        "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
-        "summary": "Six critical vulnerabilities in F5 BIG-IP allow an attacker to crash the Traffic Management Microkernel (TMM) without logging in, disrupting traffic until the TMM restarts. Each flaw needs a specific setup on a virtual server: an iRule that uses a particular command, or an APM policy that includes two particular kinds of agent. F5, which makes BIG-IP, disclosed the flaws today and says they",
+        "title": "Microsoft confirms authentication issues after November updates",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T09:02:57+00:00",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
+        "summary": "Microsoft has confirmed that customers may experience authentication issues after installing November security updates that address a high-severity remote code execution vulnerability. [...]",
         "category": "Vulnerabilities",
-        "category_reason": "Score: 5. Summary matched: vulnerabilities (+1); Title matched: rce (+4)"
+        "category_reason": "Score: 5. Summary matched: remote code execution (+3); Summary matched: vulnerability (+1); Summary matched: remote code execution (+1)"
     },
     {
-        "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
-        "source": "The Hacker News",
-        "published": "2026-11-18T17:10:45+00:00",
-        "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
-        "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS score: 9.8), is a case of unauthenticated deserialization in the XML-RPC endpoint that could lead to remote code execution. \"Deserialization of Untrusted",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 15. Summary matched: remote code execution (+3); Summary matched: vulnerability (+1); Summary matched: security flaw (+1); Title matched: rce (+4); Summary matched: cve- (+1); Title matched: exploit (+4); Summary matched: remote code execution (+1)"
-    },
-    {
-        "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-        "source": "The Hacker News",
-        "published": "2026-11-18T14:11:28+00:00",
-        "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-        "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap response is to rotate,\" Bitdefender said in a technical report shared with The Hacker News. \"A file hash changes with every recompile, a domain costs a few",
-        "category": "Malware",
-        "category_reason": "Score: 4. Title matched: malware (+4)"
-    },
-    {
-        "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
-        "source": "The Hacker News",
-        "published": "2026-11-18T12:28:30+00:00",
-        "url": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
-        "summary": "On AMD-based PCs and some Intel PCs, the TPM lockout for Windows Hello and BitLocker PINs can be reset by someone who opens the PC's case, researchers at Technische Universität Berlin say. That leaves short PINs open to guessing. In lab tests, the researchers found a four-digit Hello PIN on an AMD laptop and a 6-digit BitLocker PIN on an Intel laptop this way. Both PINs were set by the",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 8. Title matched: bypasses tpm lockout (+8)"
+        "title": "Hackers reportedly breached CIA intelligence analysis system",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T07:45:03+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+        "summary": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "Rackspace shuts down Spot cloud platform after security breach",
@@ -522,67 +585,22 @@
         "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "From Vulnerability Noise to Resilience: Rethinking Security in the AI Era",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T15:01:11+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/from-vulnerability-noise-to-resilience-rethinking-security-in-the-ai-era/",
-        "summary": "AI-driven development is adding complexity to software supply chains, leaving security teams overwhelmed by vulnerabilities that may pose little actual risk. RapidFort explains how runtime visibility, container hardening, and automated remediation can reduce vulnerability noise and improve software resilience. [...]",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 5. Title matched: vulnerability (+4); Summary matched: vulnerabilities (+1)"
-    },
-    {
-        "title": "McDonald's Japan data breach exposes customer location information",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T14:09:37+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
-        "summary": "McDonald's Japan, the fast-food giant's Japanese subsidiary, has disclosed a data breach after attackers accessed a database containing sensitive information for users of the company's official smartphone app. [...]",
-        "category": "Data Breaches",
-        "category_reason": "Score: 8. Title matched: data breach (+8)"
-    },
-    {
-        "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T13:34:23+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
-        "summary": "OpenAI and Cisco launched an open-source Linux security tool named Shirudo that deploys temporary runtime protections to block vulnerability exploitation while administrators prepare and roll out patches, without restarting services. [...]",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 10. Summary matched: vulnerability (+1); Title matched: unpatched (+4); Summary matched: rce (+1); Title matched: exploit (+4)"
-    },
-    {
-        "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-        "source": "BleepingComputer",
-        "published": "2026-11-23T20:54:51+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-        "summary": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data. [...]",
-        "category": "Data Breaches",
-        "category_reason": "Score: 8. Title matched: data breach (+8)"
-    },
-    {
-        "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-        "source": "BleepingComputer",
-        "published": "2026-11-23T20:00:20+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
-        "summary": "OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data. [...]",
+        "title": "The Great Escape: Tradecraft insights from an agentic swarm",
+        "source": "Cisco Talos",
+        "published": "2026-11-25T11:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/",
+        "summary": "The OpenAI-linked swarm activity in 2026 is fully traceable through public records. This blog analyzes its tradecraft and compares it to early signals and behaviors from current agentic attack activity seen in the wild.",
         "category": "Other",
         "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-        "source": "BleepingComputer",
-        "published": "2026-11-23T19:42:20+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
-        "summary": "Microsoft is warning customers that a security vulnerability in Azure API Management (APIM) Classic tiers was exploited to steal stored API credentials, with Norwegian authorities linking the flaw to cyberattacks against energy companies. [...]",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 8. Summary matched: security vulnerability (+3); Summary matched: vulnerability (+1); Title matched: exploit (+4)"
-    },
-    {
-        "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-        "source": "BleepingComputer",
-        "published": "2026-11-23T18:38:40+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-        "summary": "LaLiga, Spain's top men's football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs. [...]",
-        "category": "Data Breaches",
-        "category_reason": "Score: 4. Summary matched: data breach (+3); Summary matched: personal information (+1)"
+        "title": "Securing Grandma's groceries with Pierre Cadieux",
+        "source": "Cisco Talos",
+        "published": "2026-11-25T11:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/securing-grandmas-groceries-with-pierre-cadieux/",
+        "summary": "Pierre takes us back to his early days on help desks in the 90s, where learning to correlate logs between Windows and Unix systems sparked the curiosity that eventually led him to security.",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "The internet needs a nap (and you do, too)",
@@ -594,22 +612,13 @@
         "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "The challenge of defending against bulletproof dead drops on public blockchains",
-        "source": "Cisco Talos",
-        "published": "2026-11-18T11:00:00+00:00",
-        "url": "https://blog.talosintelligence.com/the-challenge-of-defending-against-bulletproof-dead-drops-on-public-blockchains/",
-        "summary": "The evolution of malware command-and-control (C2) infrastructure has shifted away from fragile, centralized servers and hardcoded domains toward resilient, decentralized blockchain networks that eliminate single points of failure.",
+        "title": "The AI Threat Horizon: Why Speed, Edge AI and Baselines Are Our Best Defense",
+        "source": "Palo Alto Unit 42",
+        "published": "2026-11-25T15:00:09+00:00",
+        "url": "https://unit42.paloaltonetworks.com/ai-threat-horizon/",
+        "summary": "Unit 42 examines the evolution of AI-driven cyberattacks and outlines proactive defense strategies for security teams. The post The AI Threat Horizon: Why Speed, Edge AI and Baselines Are Our Best Defense appeared first on Unit 42 .",
         "category": "Other",
         "category_reason": "No category reached the minimum classification score."
-    },
-    {
-        "title": "UAT-12643: Suspected North Korea-aligned actor blends blockchain resilience with targeted infostealing",
-        "source": "Cisco Talos",
-        "published": "2026-11-18T11:00:00+00:00",
-        "url": "https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing/",
-        "summary": "Cisco Talos discovered malicious infrastructure associated with a financially motivated threat group we are tracking as UAT-12643.",
-        "category": "Threat Actors",
-        "category_reason": "Score: 12. Title matched: north korea-aligned (+8); Title matched: north korea (+4)"
     },
     {
         "title": "NGINX HTTP/2 Use-After-Free: CVE-2026-123633",
@@ -1735,258 +1744,6 @@
         "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131813.",
         "category": "Vulnerabilities",
         "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1037: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Authentication Bypass Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1037/",
-        "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131809.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 18. Title matched: authentication bypass vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: authentication bypass (+4); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1036: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Wi-Fi Configuration Server Missing Authentication Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1036/",
-        "summary": "This vulnerability allows network-adjacent attackers to modify Wi-Fi configuration on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-131808.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1035: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Download of Code Without Integrity Check Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1035/",
-        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131810.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1034: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A FTP URL Path Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1034/",
-        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131812.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1033: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP GetConfiguration Stack-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1033/",
-        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131807.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1032: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Hard-Coded Credentials Authentication Bypass Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1032/",
-        "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131811.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 18. Title matched: authentication bypass vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: authentication bypass (+4); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1031: (0Day) LiteLLM MCP Command Injection Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1031/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-136535.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1030: (0Day) G DATA Total Security TSNxGService Link Following Local Privilege Escalation Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1030/",
-        "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19776.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 18. Title matched: privilege escalation vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: privilege escalation (+4); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1029: (0Day) G DATA Total Security AVKProxy Link Following Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1029/",
-        "summary": "This vulnerability allows local attackers to create a denial-of-service condition on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-19777.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1028: (0Day) G DATA Total Security Backup Service Uncontrolled Search Path Element Local Privilege Escalation Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1028/",
-        "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-19779.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 18. Title matched: privilege escalation vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: privilege escalation (+4); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1027: (0Day) Open Robotics RViz fillIndexBuffer Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1027/",
-        "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-134052.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1026: (0Day) Open Robotics RViz XYZPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1026/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134051.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1025: (0Day) Open Robotics RViz AxisColorPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1025/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134050.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1024: (0Day) Open Robotics RViz RGBF32PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1024/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134049.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1023: (0Day) Open Robotics RViz RGB8PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1023/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134048.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1022: (0Day) Open Robotics RViz IntensityPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1022/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134047.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1021: (0Day) Open Robotics RViz MapDisplay OccupancyGridUpdate Out-Of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1021/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134046.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1020: (0Day) Open Robotics RViz PointCloud2Display PointField Out-of-Bounds Read Denial-of-Service Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1020/",
-        "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134045.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1019: (0Day) Open Robotics ROS 2 sros2 load_policy XML External Entity Processing Information Disclosure Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1019/",
-        "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Open Robotics ROS 2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-134044.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "ZDI-26-1018: (0Day) Krita TIF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1018/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134043.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1017: (0Day) Krita HEIC File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1017/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134042.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1016: (0Day) Krita EXR File Parsing Integer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1016/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134041.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1015: (0Day) Krita HEIC File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1015/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134040.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1014: (0Day) Krita TIFF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1014/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134039.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1013: (0Day) Krita PSB File Parsing Integer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1013/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134038.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1012: (0Day) Krita ASL File Parsing Integer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1012/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134037.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 20. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1011: (0Day) Krita ABR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1011/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134036.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
-    },
-    {
-        "title": "ZDI-26-1010: (0Day) Krita JC2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "source": "Zero Day Initiative",
-        "published": "2026-11-18T06:00:00+00:00",
-        "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1010/",
-        "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134035.",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 24. Title matched: remote code execution (+8); Title matched: vulnerability (+4); Title matched: buffer overflow (+4); Summary matched: cve- (+1); Summary matched: exploit (+1); Summary matched: execute arbitrary code (+1); Title matched: remote code execution (+4); Summary matched: arbitrary code (+1)"
     },
     {
         "title": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
