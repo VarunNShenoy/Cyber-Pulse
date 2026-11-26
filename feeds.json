@@ -450,6 +450,33 @@
         "category_reason": "Score: 8. Title matched: hackers breach n-able (+8)"
     },
     {
+        "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T22:05:09+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+        "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet. [...]",
+        "category": "Vulnerabilities",
+        "category_reason": "Score: 6. Summary matched: vulnerabilities (+1); Title matched: exploit (+4); Summary matched: php2shell (+1)"
+    },
+    {
+        "title": "1Password customer data stolen after employee GitHub account breach",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T21:33:33+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+        "summary": "1Password has disclosed a data breach after a an employee's corporate GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+        "source": "BleepingComputer",
+        "published": "2026-11-25T19:39:31+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+        "summary": "Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
         "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
         "source": "BleepingComputer",
         "published": "2026-11-25T16:13:40+00:00",
@@ -558,29 +585,11 @@
         "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "European Commission confirms data theft in EU Academy breach",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T16:22:44+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
-        "summary": "The European Commission, the European Union's main executive body, has confirmed that attackers breached its EU Academy online learning hub and stole the personal data of an undisclosed number of users. [...]",
-        "category": "Data Breaches",
-        "category_reason": "Score: 4. Title matched: data theft (+4)"
-    },
-    {
-        "title": "Hackers compromise Check Point Servers in 22 organizations",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T16:15:23+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
-        "summary": "Threat actors have exploited multiple vulnerabilities to compromise two dozen Check Point Security management servers in an ongoing campaign targeting 22 organizations. [...]",
-        "category": "Other",
-        "category_reason": "No category reached the minimum classification score."
-    },
-    {
-        "title": "Police disrupt 57 illegal streaming services with 7.3 million visits",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T15:10:10+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/police-disrupt-57-illegal-streaming-services-with-73-million-visits/",
-        "summary": "Law enforcement authorities from 11 countries have disrupted 57 illegal streaming services that operated hundreds of websites and drew over 7.3 million visits each year. [...]",
+        "title": "Oh, is it Thanksgiving? I hadn’t noticed!",
+        "source": "Cisco Talos",
+        "published": "2026-11-25T19:00:00+00:00",
+        "url": "https://blog.talosintelligence.com/oh-is-it-thanksgiving-i-hadnt-noticed/",
+        "summary": "In true Thanksgiving fashion, David has a few thank-yous to give to the cybersecurity community (and a few choice words for threat actors).",
         "category": "Other",
         "category_reason": "No category reached the minimum classification score."
     },
