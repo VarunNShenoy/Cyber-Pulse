@@ -1,5 +1,14 @@
 [
     {
+        "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+        "source": "The Hacker News",
+        "published": "2026-11-26T19:39:57+00:00",
+        "url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+        "summary": "A website can look perfectly fine to the person running it. Log out, visit the same page, and things might look different. Something similar is happening with browser extensions, where even the way you find and install one can change what it does. Checking whether software works as expected only tells you so much. Then there’s the question of who gets to use what. Stolen logins are opening",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
         "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
         "source": "The Hacker News",
         "published": "2026-11-26T15:13:41+00:00",
@@ -441,13 +450,13 @@
         "category_reason": "Score: 9. Summary matched: zero-day (+1); Title matched: 0-day (+4); Title matched: unpatched (+4)"
     },
     {
-        "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
-        "source": "The Hacker News",
-        "published": "2026-11-19T18:47:58+00:00",
-        "url": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
-        "summary": "The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that's the problem. This week's stories show how ordinary things are being used to steal data, spread malware, and get people to hand over access. There's another shift worth watching. AI is making some attacks easier",
-        "category": "Malware",
-        "category_reason": "Score: 8. Title matched: malware (+4); Title matched: loader (+4)"
+        "title": "OpenAI warns GPT-6.2 Astra will hit usage limits 40% faster because it fixed a bug",
+        "source": "BleepingComputer",
+        "published": "2026-11-26T21:06:22+00:00",
+        "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-warns-gpt-62-astra-will-hit-usage-limits-40-percent-faster-because-it-fixed-a-bug/",
+        "summary": "OpenAI confirmed that it fixed a 'bug' that incorrectly discounted GPT-6.2 usage, which means you'll now hit GPT usage limits 40% faster than before. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
     },
     {
         "title": "NordVPN Black Friday Deal: Get 78% off VPN plans in 2026",
@@ -576,15 +585,6 @@
         "category_reason": "No category reached the minimum classification score."
     },
     {
-        "title": "Rackspace shuts down Spot cloud platform after security breach",
-        "source": "BleepingComputer",
-        "published": "2026-11-24T21:37:30+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
-        "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data. [...]",
-        "category": "Other",
-        "category_reason": "No category reached the minimum classification score."
-    },
-    {
         "title": "Oh, is it Thanksgiving? I hadn’t noticed!",
         "source": "Cisco Talos",
         "published": "2026-11-25T19:00:00+00:00",
@@ -608,15 +608,6 @@
         "published": "2026-11-25T11:00:00+00:00",
         "url": "https://blog.talosintelligence.com/securing-grandmas-groceries-with-pierre-cadieux/",
         "summary": "Pierre takes us back to his early days on help desks in the 90s, where learning to correlate logs between Windows and Unix systems sparked the curiosity that eventually led him to security.",
-        "category": "Other",
-        "category_reason": "No category reached the minimum classification score."
-    },
-    {
-        "title": "The internet needs a nap (and you do, too)",
-        "source": "Cisco Talos",
-        "published": "2026-11-19T19:00:00+00:00",
-        "url": "https://blog.talosintelligence.com/the-internet-needs-a-nap-and-you-do-too/",
-        "summary": "Bill takes a break from the non-stop breaking news to promote prioritizing environmental awareness and team stability over reactive patching.",
         "category": "Other",
         "category_reason": "No category reached the minimum classification score."
     },
