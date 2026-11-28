@@ -423,6 +423,24 @@
         "category_reason": "Score: 7. Summary matched: vulnerability (+1); Summary matched: vulnerabilities (+1); Summary matched: cve- (+1); Title matched: exploit (+4)"
     },
     {
+        "title": "pCloud confirms password manager hack after suspicious login alerts",
+        "source": "BleepingComputer",
+        "published": "2026-11-27T19:26:04+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+        "summary": "The pCloud Pass password manager suffered a cyberattack, with users reporting that unknown devices had connected to their accounts even with two-factor authentication (2FA) enabled. [...]",
+        "category": "Other",
+        "category_reason": "No category reached the minimum classification score."
+    },
+    {
+        "title": "New Boston Scientific data breach exposes personal, medical info",
+        "source": "BleepingComputer",
+        "published": "2026-11-27T18:57:42+00:00",
+        "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+        "summary": "Medical technology company Boston Scientific is sending data breach notices to individuals affected by a cyberattack on the firm. [...]",
+        "category": "Data Breaches",
+        "category_reason": "Score: 8. Title matched: data breach (+8)"
+    },
+    {
         "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
         "source": "BleepingComputer",
         "published": "2026-11-27T17:06:13+00:00",
@@ -540,24 +558,6 @@
         "category_reason": "Score: 5. Title matched: malware (+4); Summary matched: infostealer (+1)"
     },
     {
-        "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
-        "source": "BleepingComputer",
-        "published": "2026-11-26T11:50:17+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
-        "summary": "A new version of the SYS01 infostealer malware delivered through Meta ads is enrolling browsers into enterprise-style management to force the installation of an extension that steals sensitive data, including Gmail and Outlook emails. [...]",
-        "category": "Malware",
-        "category_reason": "Score: 5. Title matched: malware (+4); Summary matched: infostealer (+1)"
-    },
-    {
-        "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
-        "source": "BleepingComputer",
-        "published": "2026-11-25T22:05:09+00:00",
-        "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
-        "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet. [...]",
-        "category": "Vulnerabilities",
-        "category_reason": "Score: 6. Summary matched: vulnerabilities (+1); Title matched: exploit (+4); Summary matched: php2shell (+1)"
-    },
-    {
         "title": "Oh, is it Thanksgiving? I hadn’t noticed!",
         "source": "Cisco Talos",
         "published": "2026-11-25T19:00:00+00:00",
@@ -608,15 +608,6 @@
         "published": "2026-11-24T15:00:19+00:00",
         "url": "https://unit42.paloaltonetworks.com/autonomous-ai-agent-threat-campaigns/",
         "summary": "We tracked campaigns where attackers deployed autonomous AI agents to automate multi-platform intrusions, using standard tools while leaving distinct operational traces. The post Recent Trends and Tactics of Agentic AI Attacks appeared first on Unit 42 .",
-        "category": "Other",
-        "category_reason": "No category reached the minimum classification score."
-    },
-    {
-        "title": "Dialing for Data: Inside the Com’s High-Profile Heists",
-        "source": "Palo Alto Unit 42",
-        "published": "2026-11-20T22:00:25+00:00",
-        "url": "https://unit42.paloaltonetworks.com/com-affiliate-vishing-attacks/",
-        "summary": "Our analysis of Com affiliate vishing attacks, cloud data theft and extortion campaigns targeting healthcare and finance, with actionable defense guidance. The post Dialing for Data: Inside the Com’s High-Profile Heists appeared first on Unit 42 .",
         "category": "Other",
         "category_reason": "No category reached the minimum classification score."
     },
@@ -1699,14 +1690,5 @@
         "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of Parallels Desktop. An attacker must first obtain the ability to execute low-privileged code on the target host system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-121754.",
         "category": "Vulnerabilities",
         "category_reason": "Score: 18. Title matched: privilege escalation vulnerability (+8); Title matched: vulnerability (+4); Summary matched: cve- (+1); Title matched: privilege escalation (+4); Summary matched: exploit (+1)"
-    },
-    {
-        "title": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
-        "source": "Krebs on Security",
-        "published": "2026-11-21T00:36:39+00:00",
-        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
-        "summary": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting operation found the company was simply paying the attackers for a decryption key and charging victims a markup for work that was never performed.",
-        "category": "Ransomware",
-        "category_reason": "Score: 4. Title matched: ransomware (+4)"
     }
 ]
