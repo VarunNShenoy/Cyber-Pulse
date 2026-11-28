@@ -4510,19 +4510,5 @@
             "Phishing"
         ],
         "confidence": "Low"
-    },
-    {
-        "title": "NIK C2: The new AI-enabled command-and-control framework",
-        "source": "Cisco Talos",
-        "published": "2026-10-29T10:00:00+00:00",
-        "url": "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
-        "summary": "Cisco Talos observed a new AI-integrated command-and-control (C2) framework in the wild called “NIK C2.”",
-        "category": "Malware",
-        "category_reason": "Classified as Malware (Low confidence, score 5).\nWhy: keywords in the headline; no other category matched.\nKey evidence: Title: 'command-and-control' (+5)\nTopics detected: AI/LLM",
-        "secondary_categories": [],
-        "tags": [
-            "AI/LLM"
-        ],
-        "confidence": "Low"
     }
 ]
